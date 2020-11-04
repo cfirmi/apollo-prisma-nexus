@@ -491,6 +491,48 @@ export interface NexusGenFieldTypes {
   }
 }
 
+export interface NexusGenFieldTypeNames {
+  Emojimood: { // field return type name
+    colorOne: 'String'
+    colorTwo: 'String'
+    id: 'Int'
+    Profile: 'Profile'
+  }
+  Mutation: { // field return type name
+    createEmojimood: 'Emojimood'
+    deleteOneProfile: 'Profile'
+    signupUser: 'User'
+  }
+  Profile: { // field return type name
+    bio: 'String'
+    emojimood: 'Emojimood'
+    id: 'Int'
+    User: 'User'
+  }
+  Query: { // field return type name
+    allEmojimoods: 'Emojimood'
+    SearchUsers: 'User'
+    userCRUDY: 'User'
+    users: 'User'
+  }
+  User: { // field return type name
+    email: 'String'
+    id: 'Int'
+    name: 'String'
+    profile: 'Profile'
+    venues: 'Venue'
+  }
+  Venue: { // field return type name
+    id: 'Int'
+    VenueDetails: 'VenueDetails'
+  }
+  VenueDetails: { // field return type name
+    description: 'String'
+    id: 'Int'
+    name: 'String'
+  }
+}
+
 export interface NexusGenArgTypes {
   Emojimood: {
     Profile: { // args
@@ -568,6 +610,7 @@ export interface NexusGenTypes {
   rootTypes: NexusGenRootTypes;
   argTypes: NexusGenArgTypes;
   fieldTypes: NexusGenFieldTypes;
+  fieldTypeNames: NexusGenFieldTypeNames;
   allTypes: NexusGenAllTypes;
   inheritedFields: NexusGenInheritedFields;
   objectNames: NexusGenObjectNames;

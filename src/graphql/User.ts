@@ -1,4 +1,4 @@
-import { extendType, intArg, objectType, stringArg  } from '@nexus/schema'
+import { extendType, intArg, objectType, stringArg } from '@nexus/schema'
 import * as nexus from '@nexus/schema'
 
 export const User = objectType({
@@ -7,9 +7,9 @@ export const User = objectType({
     t.model.id()
     t.model.name()
     t.model.email()
-    t.model.profile({ type: 'Profile'})
-    t.model.venues({type: "Venue"})
-    t.model.VenueAdministration()
+    t.model.profile({ type: 'Profile' })
+    t.model.venues({ type: "Venue" })
+    t.model.VenueAdministration({ type: "Profile" })
   },
 })
 
@@ -31,7 +31,11 @@ export const UserMutation = nexus.extendType({
   definition(t) {
     t.crud.createOneUser({ alias: 'createUser' })
     t.crud.deleteOneProfile()
-    t.crud.updateOneUser()
+
+    // When I add this crud to my mutations i get the error
+    // [ERROR] 14:06:01 Error: Input Object type VenueAdministrationUpdateManyDataInput must define one or more fields.
+    // i'm thinking that i need to add something to the above objectType to resovle
+    t.crud.updateOneUser({ alias: 'updateUser' })
   },
 })
 
@@ -47,20 +51,20 @@ export const UserQuery = nexus.extendType({
       }
     }),
 
-    t.crud.users({ filtering: true, pagination: true }),
+      t.crud.users({ filtering: true, pagination: true }),
 
-    t.field("findUser", {
-      type: User,
-       nullable: true,
-      args: {
-        id: intArg(),
-        name: stringArg(),
-      },
-      description: "Find a single user by their id",
-      resolve: (parent, { id }, ctx) => {
-        return ctx.prisma.user.findOne({ where: { id: Number(id) }})
-      }
-    })
+      t.field("findUser", {
+        type: User,
+        nullable: true,
+        args: {
+          id: intArg(),
+          name: stringArg(),
+        },
+        description: "Find a single user by their id",
+        resolve: (parent, { id }, ctx) => {
+          return ctx.prisma.user.findOne({ where: { id: Number(id) } })
+        }
+      })
   },
 })
 

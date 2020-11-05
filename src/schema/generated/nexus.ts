@@ -746,7 +746,7 @@ export interface NexusGenFieldTypes {
     createEmojimood: NexusGenRootTypes['Emojimood']; // Emojimood!
     createUser: NexusGenRootTypes['User']; // User!
     deleteOneProfile: NexusGenRootTypes['Profile'] | null; // Profile
-    updateOneUser: NexusGenRootTypes['User'] | null; // User
+    updateUser: NexusGenRootTypes['User'] | null; // User
   }
   Profile: { // field return type
     bio: string | null; // String
@@ -765,6 +765,7 @@ export interface NexusGenFieldTypes {
     id: number; // Int!
     name: string | null; // String
     profile: NexusGenRootTypes['Profile'] | null; // Profile
+    VenueAdministration: NexusGenRootTypes['Profile'][]; // [Profile!]!
     venues: NexusGenRootTypes['Venue'][]; // [Venue!]!
   }
   Venue: { // field return type
@@ -789,7 +790,7 @@ export interface NexusGenFieldTypeNames {
     createEmojimood: 'Emojimood'
     createUser: 'User'
     deleteOneProfile: 'Profile'
-    updateOneUser: 'User'
+    updateUser: 'User'
   }
   Profile: { // field return type name
     bio: 'String'
@@ -808,6 +809,7 @@ export interface NexusGenFieldTypeNames {
     id: 'Int'
     name: 'String'
     profile: 'Profile'
+    VenueAdministration: 'Profile'
     venues: 'Venue'
   }
   Venue: { // field return type name
@@ -840,7 +842,7 @@ export interface NexusGenArgTypes {
     deleteOneProfile: { // args
       where: NexusGenInputs['ProfileWhereUniqueInput']; // ProfileWhereUniqueInput!
     }
-    updateOneUser: { // args
+    updateUser: { // args
       data: NexusGenInputs['UserUpdateInput']; // UserUpdateInput!
       where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
     }
@@ -871,6 +873,12 @@ export interface NexusGenArgTypes {
     }
   }
   User: {
+    VenueAdministration: { // args
+      after?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
+      before?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
+      first?: number | null; // Int
+      last?: number | null; // Int
+    }
     venues: { // args
       after?: NexusGenInputs['VenueWhereUniqueInput'] | null; // VenueWhereUniqueInput
       before?: NexusGenInputs['VenueWhereUniqueInput'] | null; // VenueWhereUniqueInput

@@ -9,8 +9,10 @@ export const User = objectType({
     t.model.email()
     t.model.profile({ type: 'Profile'})
     t.model.venues({type: "Venue"})
+    t.model.VenueAdministration()
   },
 })
+
 
 export const Profile = objectType({
   name: 'Profile',
@@ -27,8 +29,9 @@ export const Profile = objectType({
 export const UserMutation = nexus.extendType({
   type: 'Mutation',
   definition(t) {
-    t.crud.createOneUser({ alias: 'createUserBitch' })
+    t.crud.createOneUser({ alias: 'createUser' })
     t.crud.deleteOneProfile()
+    t.crud.updateOneUser()
   },
 })
 
@@ -46,14 +49,14 @@ export const UserQuery = nexus.extendType({
 
     t.crud.users({ filtering: true, pagination: true }),
 
-    t.field("userCRUDY", {
+    t.field("findUser", {
       type: User,
        nullable: true,
       args: {
         id: intArg(),
         name: stringArg(),
       },
-      description: "Use this as you are a bitch",
+      description: "Find a single user by their id",
       resolve: (parent, { id }, ctx) => {
         return ctx.prisma.user.findOne({ where: { id: Number(id) }})
       }

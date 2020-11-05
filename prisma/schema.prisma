@@ -14,17 +14,19 @@ model User {
   profile             Profile?
   venues              Venue[]
   VenueAdministration VenueAdministration[] @relation("UserToVenueAdministrationManyToMany")
+  businessAccountId   Int
+  businessProfile     BusinessAccount       @relation(fields: [businessAccountId], references: [id])
   createdAt           DateTime              @default(now())
 }
 
 model Profile {
-  id          Int       @id @default(autoincrement())
+  id          Int        @id @default(autoincrement())
   bio         String?
   emojimoodId Int?
   emojimood   Emojimood? @relation(fields: [emojimoodId], references: [id])
-  user        Int       @unique
-  userId      Int?      @unique
-  User        User?     @relation(fields: [userId], references: [id])
+  user        Int        @unique
+  userId      Int?       @unique
+  User        User?      @relation(fields: [userId], references: [id])
 }
 
 model Emojimood {
@@ -32,6 +34,13 @@ model Emojimood {
   colorOne String
   colorTwo String
 
+  Profile Profile[]
+}
+
+model BusinessAccount {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  User      User[]
 }
 
 model Venue {

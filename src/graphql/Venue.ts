@@ -21,7 +21,7 @@ export const VenueAdministration = objectType({
   name: 'VenueAdministration',
   definition(t) {
     t.model.id()
-    t.model.admins()
+    t.model.admins({type: "User"})
     t.model.venue()
   },
 })

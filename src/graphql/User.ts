@@ -27,7 +27,7 @@ export const Profile = objectType({
 export const UserMutation = nexus.extendType({
   type: 'Mutation',
   definition(t) {
-    t.crud.createOneUser({ alias: 'signupUser' })
+    t.crud.createOneUser({ alias: 'createUserBitch' })
     t.crud.deleteOneProfile()
   },
 })

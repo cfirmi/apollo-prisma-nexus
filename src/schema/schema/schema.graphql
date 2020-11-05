@@ -76,8 +76,8 @@ input IntNullableFilter {
 
 type Mutation {
   createEmojimood(data: EmojimoodCreateInput!): Emojimood!
+  createUserBitch(data: UserCreateInput!): User!
   deleteOneProfile(where: ProfileWhereUniqueInput!): Profile
-  signupUser(data: UserCreateInput!): User!
 }
 
 input NestedDateTimeFilter {

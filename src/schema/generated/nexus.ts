@@ -458,8 +458,8 @@ export interface NexusGenFieldTypes {
   }
   Mutation: { // field return type
     createEmojimood: NexusGenRootTypes['Emojimood']; // Emojimood!
+    createUserBitch: NexusGenRootTypes['User']; // User!
     deleteOneProfile: NexusGenRootTypes['Profile'] | null; // Profile
-    signupUser: NexusGenRootTypes['User']; // User!
   }
   Profile: { // field return type
     bio: string | null; // String
@@ -504,11 +504,11 @@ export interface NexusGenArgTypes {
     createEmojimood: { // args
       data: NexusGenInputs['EmojimoodCreateInput']; // EmojimoodCreateInput!
     }
+    createUserBitch: { // args
+      data: NexusGenInputs['UserCreateInput']; // UserCreateInput!
+    }
     deleteOneProfile: { // args
       where: NexusGenInputs['ProfileWhereUniqueInput']; // ProfileWhereUniqueInput!
-    }
-    signupUser: { // args
-      data: NexusGenInputs['UserCreateInput']; // UserCreateInput!
     }
   }
   Query: {

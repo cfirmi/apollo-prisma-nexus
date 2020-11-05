@@ -51,6 +51,7 @@ export const UserQuery = nexus.extendType({
        nullable: true,
       args: {
         id: intArg(),
+        name: stringArg(),
       },
       description: "Use this as you are a bitch",
       resolve: (parent, { id }, ctx) => {

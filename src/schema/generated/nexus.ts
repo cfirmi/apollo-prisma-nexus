@@ -179,6 +179,7 @@ export interface NexusGenInputs {
     in?: string[] | null; // [String!]
     lt?: string | null; // String
     lte?: string | null; // String
+    mode?: NexusGenEnums['QueryMode'] | null; // QueryMode
     not?: NexusGenInputs['NestedStringFilter'] | null; // NestedStringFilter
     notIn?: string[] | null; // [String!]
     startsWith?: string | null; // String
@@ -192,6 +193,7 @@ export interface NexusGenInputs {
     in?: string[] | null; // [String!]
     lt?: string | null; // String
     lte?: string | null; // String
+    mode?: NexusGenEnums['QueryMode'] | null; // QueryMode
     not?: NexusGenInputs['NestedStringNullableFilter'] | null; // NestedStringNullableFilter
     notIn?: string[] | null; // [String!]
     startsWith?: string | null; // String
@@ -352,6 +354,7 @@ export interface NexusGenInputs {
 }
 
 export interface NexusGenEnums {
+  QueryMode: "default" | "insensitive"
 }
 
 export interface NexusGenScalars {
@@ -441,6 +444,7 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
   VenueListRelationFilter: NexusGenInputs['VenueListRelationFilter'];
   VenueWhereInput: NexusGenInputs['VenueWhereInput'];
   VenueWhereUniqueInput: NexusGenInputs['VenueWhereUniqueInput'];
+  QueryMode: NexusGenEnums['QueryMode'];
   String: NexusGenScalars['String'];
   Int: NexusGenScalars['Int'];
   Float: NexusGenScalars['Float'];
@@ -491,6 +495,48 @@ export interface NexusGenFieldTypes {
   }
 }
 
+export interface NexusGenFieldTypeNames {
+  Emojimood: { // field return type name
+    colorOne: 'String'
+    colorTwo: 'String'
+    id: 'Int'
+    Profile: 'Profile'
+  }
+  Mutation: { // field return type name
+    createEmojimood: 'Emojimood'
+    createUserBitch: 'User'
+    deleteOneProfile: 'Profile'
+  }
+  Profile: { // field return type name
+    bio: 'String'
+    emojimood: 'Emojimood'
+    id: 'Int'
+    User: 'User'
+  }
+  Query: { // field return type name
+    allEmojimoods: 'Emojimood'
+    SearchUsers: 'User'
+    userCRUDY: 'User'
+    users: 'User'
+  }
+  User: { // field return type name
+    email: 'String'
+    id: 'Int'
+    name: 'String'
+    profile: 'Profile'
+    venues: 'Venue'
+  }
+  Venue: { // field return type name
+    id: 'Int'
+    VenueDetails: 'VenueDetails'
+  }
+  VenueDetails: { // field return type name
+    description: 'String'
+    id: 'Int'
+    name: 'String'
+  }
+}
+
 export interface NexusGenArgTypes {
   Emojimood: {
     Profile: { // args
@@ -526,6 +572,7 @@ export interface NexusGenArgTypes {
     }
     userCRUDY: { // args
       id?: number | null; // Int
+      name?: string | null; // String
     }
     users: { // args
       after?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
@@ -554,7 +601,7 @@ export type NexusGenObjectNames = "Emojimood" | "Mutation" | "Profile" | "Query"
 
 export type NexusGenInputNames = "DateTimeFilter" | "EmojimoodCreateInput" | "EmojimoodCreateOneWithoutProfileInput" | "EmojimoodCreateWithoutProfileInput" | "EmojimoodWhereInput" | "EmojimoodWhereUniqueInput" | "IntFilter" | "IntNullableFilter" | "NestedDateTimeFilter" | "NestedIntFilter" | "NestedIntNullableFilter" | "NestedStringFilter" | "NestedStringNullableFilter" | "ProfileCreateManyWithoutEmojimoodInput" | "ProfileCreateOneWithoutUserInput" | "ProfileCreateWithoutEmojimoodInput" | "ProfileCreateWithoutUserInput" | "ProfileListRelationFilter" | "ProfileWhereInput" | "ProfileWhereUniqueInput" | "StringFilter" | "StringNullableFilter" | "UserCreateInput" | "UserCreateManyWithoutVenueAdministrationInput" | "UserCreateOneWithoutProfileInput" | "UserCreateOneWithoutVenuesInput" | "UserCreateWithoutProfileInput" | "UserCreateWithoutVenueAdministrationInput" | "UserCreateWithoutVenuesInput" | "UserListRelationFilter" | "UserWhereInput" | "UserWhereUniqueInput" | "VenueAdministrationCreateManyWithoutAdminsInput" | "VenueAdministrationCreateOneWithoutVenueInput" | "VenueAdministrationCreateWithoutAdminsInput" | "VenueAdministrationCreateWithoutVenueInput" | "VenueAdministrationListRelationFilter" | "VenueAdministrationWhereInput" | "VenueAdministrationWhereUniqueInput" | "VenueCreateManyWithoutUserInput" | "VenueCreateOneWithoutVenueAdministrationInput" | "VenueCreateWithoutUserInput" | "VenueCreateWithoutVenueAdministrationInput" | "VenueDetailsCreateOneWithoutVenueInput" | "VenueDetailsCreateWithoutVenueInput" | "VenueDetailsWhereInput" | "VenueDetailsWhereUniqueInput" | "VenueListRelationFilter" | "VenueWhereInput" | "VenueWhereUniqueInput";
 
-export type NexusGenEnumNames = never;
+export type NexusGenEnumNames = "QueryMode";
 
 export type NexusGenInterfaceNames = never;
 
@@ -568,6 +615,7 @@ export interface NexusGenTypes {
   rootTypes: NexusGenRootTypes;
   argTypes: NexusGenArgTypes;
   fieldTypes: NexusGenFieldTypes;
+  fieldTypeNames: NexusGenFieldTypeNames;
   allTypes: NexusGenAllTypes;
   inheritedFields: NexusGenInheritedFields;
   objectNames: NexusGenObjectNames;

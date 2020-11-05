@@ -76,8 +76,8 @@ input IntNullableFilter {
 
 type Mutation {
   createEmojimood(data: EmojimoodCreateInput!): Emojimood!
+  createUserBitch(data: UserCreateInput!): User!
   deleteOneProfile(where: ProfileWhereUniqueInput!): Profile
-  signupUser(data: UserCreateInput!): User!
 }
 
 input NestedDateTimeFilter {
@@ -200,8 +200,13 @@ type Query {
   SearchUsers(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int): [User!]!
 
   """Use this as you are a bitch"""
-  userCRUDY(id: Int): User
+  userCRUDY(id: Int, name: String): User
   users(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int, where: UserWhereInput): [User!]!
+}
+
+enum QueryMode {
+  default
+  insensitive
 }
 
 input StringFilter {
@@ -213,6 +218,7 @@ input StringFilter {
   in: [String!]
   lt: String
   lte: String
+  mode: QueryMode
   not: NestedStringFilter
   notIn: [String!]
   startsWith: String
@@ -227,6 +233,7 @@ input StringNullableFilter {
   in: [String!]
   lt: String
   lte: String
+  mode: QueryMode
   not: NestedStringNullableFilter
   notIn: [String!]
   startsWith: String

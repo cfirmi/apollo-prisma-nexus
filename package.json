@@ -2,7 +2,7 @@
   "name": "typescript-graphql",
   "scripts": {
     "start": "node dist/server",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist && rm -rf node_modules",
     "build": "npm -s run clean && npm -s run generate && tsc",
     "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
     "generate:prisma": "prisma generate",
@@ -11,8 +11,8 @@
     "studio": "npx prisma studio"
   },
   "dependencies": {
-    "@nexus/schema": "0.15.0",
-    "@prisma/client": "^2.10.2",
+    "@nexus/schema": "^0.17.0",
+    "@prisma/client": "2.10.0",
     "@types/node-fetch": "2.5.7",
     "apollo-server": "2.17.0",
     "apollo-server-express": "^2.18.2",
@@ -21,7 +21,7 @@
     "express": "^4.17.1",
     "graphql": "15.3.0",
     "http": "0.0.1-security",
-    "nexus-plugin-prisma": "0.19.0"
+    "nexus-plugin-prisma": "^0.23.1"
   },
   "devDependencies": {
     "@prisma/cli": "^2.10.2",

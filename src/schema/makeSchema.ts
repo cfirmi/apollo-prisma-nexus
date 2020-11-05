@@ -4,11 +4,10 @@ import { makeSchema } from '@nexus/schema'
 import { resolvers } from '../graphql'
 
 export const schema = makeSchema({
-  // types: [Query, Mutation, User, Profile, Venue, VenueDetails, VenueAdministration],
-  types: [resolvers],
-  plugins: [nexusSchemaPrisma({ experimentalCRUD: true })],
+  types: resolvers,
+  plugins: [nexusSchemaPrisma({ experimentalCRUD: true })],
   outputs: {
-    schema: __dirname + '/schema.graphql',
+    schema: __dirname + '/schema/schema.graphql',
     typegen: __dirname + '/generated/nexus.ts',
   },
   typegenAutoConfig: {

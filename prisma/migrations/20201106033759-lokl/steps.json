@@ -1,0 +1,76 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "VenueAdministration",
+      "field": "name",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "VenueAdministration",
+      "field": "AdminsBusinessAccount",
+      "type": "BusinessAccount",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "VenueAdministration",
+          "field": "AdminsBusinessAccount"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "VenueAdministration",
+          "field": "AdminsBusinessAccount"
+        },
+        "directive": "relation"
+      },
+      "argument": "",
+      "value": "\"VenueAdministrationToBusinessAccoutManyToMany\""
+    },
+    {
+      "tag": "CreateField",
+      "model": "BusinessAccount",
+      "field": "VenueAdministration",
+      "type": "VenueAdministration",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "VenueAdministration"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "VenueAdministration"
+        },
+        "directive": "relation"
+      },
+      "argument": "",
+      "value": "\"VenueAdministrationToBusinessAccoutManyToMany\""
+    }
+  ]
+}

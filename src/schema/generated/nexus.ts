@@ -19,6 +19,142 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  BusinessAccountCreateManyWithoutVenueAdministrationInput: { // input type
+    connect?: NexusGenInputs['BusinessAccountWhereUniqueInput'][] | null; // [BusinessAccountWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['BusinessAccountCreateOrConnectWithoutVenueAdministrationInput'][] | null; // [BusinessAccountCreateOrConnectWithoutVenueAdministrationInput!]
+    create?: NexusGenInputs['BusinessAccountCreateWithoutVenueAdministrationInput'][] | null; // [BusinessAccountCreateWithoutVenueAdministrationInput!]
+  }
+  BusinessAccountCreateOneWithoutUserInput: { // input type
+    connect?: NexusGenInputs['BusinessAccountWhereUniqueInput'] | null; // BusinessAccountWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['BusinessAccountCreateOrConnectWithoutUserInput'] | null; // BusinessAccountCreateOrConnectWithoutUserInput
+    create?: NexusGenInputs['BusinessAccountCreateWithoutUserInput'] | null; // BusinessAccountCreateWithoutUserInput
+  }
+  BusinessAccountCreateOneWithoutVenueInput: { // input type
+    connect?: NexusGenInputs['BusinessAccountWhereUniqueInput'] | null; // BusinessAccountWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['BusinessAccountCreateOrConnectWithoutVenueInput'] | null; // BusinessAccountCreateOrConnectWithoutVenueInput
+    create?: NexusGenInputs['BusinessAccountCreateWithoutVenueInput'] | null; // BusinessAccountCreateWithoutVenueInput
+  }
+  BusinessAccountCreateOrConnectWithoutUserInput: { // input type
+    create: NexusGenInputs['BusinessAccountCreateWithoutUserInput']; // BusinessAccountCreateWithoutUserInput!
+    where: NexusGenInputs['BusinessAccountWhereUniqueInput']; // BusinessAccountWhereUniqueInput!
+  }
+  BusinessAccountCreateOrConnectWithoutVenueAdministrationInput: { // input type
+    create: NexusGenInputs['BusinessAccountCreateWithoutVenueAdministrationInput']; // BusinessAccountCreateWithoutVenueAdministrationInput!
+    where: NexusGenInputs['BusinessAccountWhereUniqueInput']; // BusinessAccountWhereUniqueInput!
+  }
+  BusinessAccountCreateOrConnectWithoutVenueInput: { // input type
+    create: NexusGenInputs['BusinessAccountCreateWithoutVenueInput']; // BusinessAccountCreateWithoutVenueInput!
+    where: NexusGenInputs['BusinessAccountWhereUniqueInput']; // BusinessAccountWhereUniqueInput!
+  }
+  BusinessAccountCreateWithoutUserInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    Venue?: NexusGenInputs['VenueCreateManyWithoutBusinessAccountInput'] | null; // VenueCreateManyWithoutBusinessAccountInput
+    VenueAdministration?: NexusGenInputs['VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput'] | null; // VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput
+  }
+  BusinessAccountCreateWithoutVenueAdministrationInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    User?: NexusGenInputs['UserCreateOneWithoutBusinessAccountInput'] | null; // UserCreateOneWithoutBusinessAccountInput
+    Venue?: NexusGenInputs['VenueCreateManyWithoutBusinessAccountInput'] | null; // VenueCreateManyWithoutBusinessAccountInput
+  }
+  BusinessAccountCreateWithoutVenueInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    User?: NexusGenInputs['UserCreateOneWithoutBusinessAccountInput'] | null; // UserCreateOneWithoutBusinessAccountInput
+    VenueAdministration?: NexusGenInputs['VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput'] | null; // VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput
+  }
+  BusinessAccountListRelationFilter: { // input type
+    every?: NexusGenInputs['BusinessAccountWhereInput'] | null; // BusinessAccountWhereInput
+    none?: NexusGenInputs['BusinessAccountWhereInput'] | null; // BusinessAccountWhereInput
+    some?: NexusGenInputs['BusinessAccountWhereInput'] | null; // BusinessAccountWhereInput
+  }
+  BusinessAccountScalarWhereInput: { // input type
+    AND?: NexusGenInputs['BusinessAccountScalarWhereInput'][] | null; // [BusinessAccountScalarWhereInput!]
+    createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    NOT?: NexusGenInputs['BusinessAccountScalarWhereInput'][] | null; // [BusinessAccountScalarWhereInput!]
+    OR?: NexusGenInputs['BusinessAccountScalarWhereInput'][] | null; // [BusinessAccountScalarWhereInput!]
+  }
+  BusinessAccountUpdateManyMutationInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+  }
+  BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput: { // input type
+    data: NexusGenInputs['BusinessAccountUpdateManyMutationInput']; // BusinessAccountUpdateManyMutationInput!
+    where: NexusGenInputs['BusinessAccountScalarWhereInput']; // BusinessAccountScalarWhereInput!
+  }
+  BusinessAccountUpdateManyWithoutVenueAdministrationInput: { // input type
+    connect?: NexusGenInputs['BusinessAccountWhereUniqueInput'][] | null; // [BusinessAccountWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['BusinessAccountCreateOrConnectWithoutVenueAdministrationInput'][] | null; // [BusinessAccountCreateOrConnectWithoutVenueAdministrationInput!]
+    create?: NexusGenInputs['BusinessAccountCreateWithoutVenueAdministrationInput'][] | null; // [BusinessAccountCreateWithoutVenueAdministrationInput!]
+    delete?: NexusGenInputs['BusinessAccountWhereUniqueInput'][] | null; // [BusinessAccountWhereUniqueInput!]
+    deleteMany?: NexusGenInputs['BusinessAccountScalarWhereInput'][] | null; // [BusinessAccountScalarWhereInput!]
+    disconnect?: NexusGenInputs['BusinessAccountWhereUniqueInput'][] | null; // [BusinessAccountWhereUniqueInput!]
+    set?: NexusGenInputs['BusinessAccountWhereUniqueInput'][] | null; // [BusinessAccountWhereUniqueInput!]
+    update?: NexusGenInputs['BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput'][] | null; // [BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput!]
+    updateMany?: NexusGenInputs['BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput'][] | null; // [BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput!]
+    upsert?: NexusGenInputs['BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput'][] | null; // [BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput!]
+  }
+  BusinessAccountUpdateOneWithoutUserInput: { // input type
+    connect?: NexusGenInputs['BusinessAccountWhereUniqueInput'] | null; // BusinessAccountWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['BusinessAccountCreateOrConnectWithoutUserInput'] | null; // BusinessAccountCreateOrConnectWithoutUserInput
+    create?: NexusGenInputs['BusinessAccountCreateWithoutUserInput'] | null; // BusinessAccountCreateWithoutUserInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['BusinessAccountUpdateWithoutUserInput'] | null; // BusinessAccountUpdateWithoutUserInput
+    upsert?: NexusGenInputs['BusinessAccountUpsertWithoutUserInput'] | null; // BusinessAccountUpsertWithoutUserInput
+  }
+  BusinessAccountUpdateOneWithoutVenueInput: { // input type
+    connect?: NexusGenInputs['BusinessAccountWhereUniqueInput'] | null; // BusinessAccountWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['BusinessAccountCreateOrConnectWithoutVenueInput'] | null; // BusinessAccountCreateOrConnectWithoutVenueInput
+    create?: NexusGenInputs['BusinessAccountCreateWithoutVenueInput'] | null; // BusinessAccountCreateWithoutVenueInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['BusinessAccountUpdateWithoutVenueInput'] | null; // BusinessAccountUpdateWithoutVenueInput
+    upsert?: NexusGenInputs['BusinessAccountUpsertWithoutVenueInput'] | null; // BusinessAccountUpsertWithoutVenueInput
+  }
+  BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput: { // input type
+    data: NexusGenInputs['BusinessAccountUpdateWithoutVenueAdministrationInput']; // BusinessAccountUpdateWithoutVenueAdministrationInput!
+    where: NexusGenInputs['BusinessAccountWhereUniqueInput']; // BusinessAccountWhereUniqueInput!
+  }
+  BusinessAccountUpdateWithoutUserInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    Venue?: NexusGenInputs['VenueUpdateManyWithoutBusinessAccountInput'] | null; // VenueUpdateManyWithoutBusinessAccountInput
+    VenueAdministration?: NexusGenInputs['VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput'] | null; // VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput
+  }
+  BusinessAccountUpdateWithoutVenueAdministrationInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    User?: NexusGenInputs['UserUpdateOneWithoutBusinessAccountInput'] | null; // UserUpdateOneWithoutBusinessAccountInput
+    Venue?: NexusGenInputs['VenueUpdateManyWithoutBusinessAccountInput'] | null; // VenueUpdateManyWithoutBusinessAccountInput
+  }
+  BusinessAccountUpdateWithoutVenueInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    User?: NexusGenInputs['UserUpdateOneWithoutBusinessAccountInput'] | null; // UserUpdateOneWithoutBusinessAccountInput
+    VenueAdministration?: NexusGenInputs['VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput'] | null; // VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput
+  }
+  BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput: { // input type
+    create: NexusGenInputs['BusinessAccountCreateWithoutVenueAdministrationInput']; // BusinessAccountCreateWithoutVenueAdministrationInput!
+    update: NexusGenInputs['BusinessAccountUpdateWithoutVenueAdministrationInput']; // BusinessAccountUpdateWithoutVenueAdministrationInput!
+    where: NexusGenInputs['BusinessAccountWhereUniqueInput']; // BusinessAccountWhereUniqueInput!
+  }
+  BusinessAccountUpsertWithoutUserInput: { // input type
+    create: NexusGenInputs['BusinessAccountCreateWithoutUserInput']; // BusinessAccountCreateWithoutUserInput!
+    update: NexusGenInputs['BusinessAccountUpdateWithoutUserInput']; // BusinessAccountUpdateWithoutUserInput!
+  }
+  BusinessAccountUpsertWithoutVenueInput: { // input type
+    create: NexusGenInputs['BusinessAccountCreateWithoutVenueInput']; // BusinessAccountCreateWithoutVenueInput!
+    update: NexusGenInputs['BusinessAccountUpdateWithoutVenueInput']; // BusinessAccountUpdateWithoutVenueInput!
+  }
+  BusinessAccountWhereInput: { // input type
+    AND?: NexusGenInputs['BusinessAccountWhereInput'][] | null; // [BusinessAccountWhereInput!]
+    createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
+    id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    NOT?: NexusGenInputs['BusinessAccountWhereInput'][] | null; // [BusinessAccountWhereInput!]
+    OR?: NexusGenInputs['BusinessAccountWhereInput'][] | null; // [BusinessAccountWhereInput!]
+    User?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
+    Venue?: NexusGenInputs['VenueListRelationFilter'] | null; // VenueListRelationFilter
+    VenueAdministration?: NexusGenInputs['VenueAdministrationListRelationFilter'] | null; // VenueAdministrationListRelationFilter
+  }
+  BusinessAccountWhereUniqueInput: { // input type
+    id?: number | null; // Int
+  }
   DateTimeFieldUpdateOperationsInput: { // input type
     set?: NexusGenScalars['DateTime'] | null; // DateTime
   }
@@ -39,27 +175,38 @@ export interface NexusGenInputs {
   }
   EmojimoodCreateOneWithoutProfileInput: { // input type
     connect?: NexusGenInputs['EmojimoodWhereUniqueInput'] | null; // EmojimoodWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['EmojimoodCreateOrConnectWithoutProfileInput'] | null; // EmojimoodCreateOrConnectWithoutProfileInput
     create?: NexusGenInputs['EmojimoodCreateWithoutProfileInput'] | null; // EmojimoodCreateWithoutProfileInput
+  }
+  EmojimoodCreateOrConnectWithoutProfileInput: { // input type
+    create: NexusGenInputs['EmojimoodCreateWithoutProfileInput']; // EmojimoodCreateWithoutProfileInput!
+    where: NexusGenInputs['EmojimoodWhereUniqueInput']; // EmojimoodWhereUniqueInput!
   }
   EmojimoodCreateWithoutProfileInput: { // input type
     colorOne: string; // String!
     colorTwo: string; // String!
   }
+  EmojimoodUpdateInput: { // input type
+    colorOne?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    colorTwo?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+    Profile?: NexusGenInputs['ProfileUpdateManyWithoutEmojimoodInput'] | null; // ProfileUpdateManyWithoutEmojimoodInput
+  }
   EmojimoodUpdateOneWithoutProfileInput: { // input type
     connect?: NexusGenInputs['EmojimoodWhereUniqueInput'] | null; // EmojimoodWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['EmojimoodCreateOrConnectWithoutProfileInput'] | null; // EmojimoodCreateOrConnectWithoutProfileInput
     create?: NexusGenInputs['EmojimoodCreateWithoutProfileInput'] | null; // EmojimoodCreateWithoutProfileInput
     delete?: boolean | null; // Boolean
     disconnect?: boolean | null; // Boolean
-    update?: NexusGenInputs['EmojimoodUpdateWithoutProfileDataInput'] | null; // EmojimoodUpdateWithoutProfileDataInput
+    update?: NexusGenInputs['EmojimoodUpdateWithoutProfileInput'] | null; // EmojimoodUpdateWithoutProfileInput
     upsert?: NexusGenInputs['EmojimoodUpsertWithoutProfileInput'] | null; // EmojimoodUpsertWithoutProfileInput
   }
-  EmojimoodUpdateWithoutProfileDataInput: { // input type
+  EmojimoodUpdateWithoutProfileInput: { // input type
     colorOne?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     colorTwo?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
   }
   EmojimoodUpsertWithoutProfileInput: { // input type
     create: NexusGenInputs['EmojimoodCreateWithoutProfileInput']; // EmojimoodCreateWithoutProfileInput!
-    update: NexusGenInputs['EmojimoodUpdateWithoutProfileDataInput']; // EmojimoodUpdateWithoutProfileDataInput!
+    update: NexusGenInputs['EmojimoodUpdateWithoutProfileInput']; // EmojimoodUpdateWithoutProfileInput!
   }
   EmojimoodWhereInput: { // input type
     AND?: NexusGenInputs['EmojimoodWhereInput'][] | null; // [EmojimoodWhereInput!]
@@ -72,13 +219,6 @@ export interface NexusGenInputs {
   }
   EmojimoodWhereUniqueInput: { // input type
     id?: number | null; // Int
-  }
-  IntFieldUpdateOperationsInput: { // input type
-    decrement?: number | null; // Int
-    divide?: number | null; // Int
-    increment?: number | null; // Int
-    multiply?: number | null; // Int
-    set?: number | null; // Int
   }
   IntFilter: { // input type
     equals?: number | null; // Int
@@ -161,59 +301,111 @@ export interface NexusGenInputs {
   }
   ProfileCreateManyWithoutEmojimoodInput: { // input type
     connect?: NexusGenInputs['ProfileWhereUniqueInput'][] | null; // [ProfileWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['ProfileCreateOrConnectWithoutEmojimoodInput'][] | null; // [ProfileCreateOrConnectWithoutEmojimoodInput!]
     create?: NexusGenInputs['ProfileCreateWithoutEmojimoodInput'][] | null; // [ProfileCreateWithoutEmojimoodInput!]
   }
   ProfileCreateOneWithoutUserInput: { // input type
     connect?: NexusGenInputs['ProfileWhereUniqueInput'] | null; // ProfileWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['ProfileCreateOrConnectWithoutUserInput'] | null; // ProfileCreateOrConnectWithoutUserInput
     create?: NexusGenInputs['ProfileCreateWithoutUserInput'] | null; // ProfileCreateWithoutUserInput
+  }
+  ProfileCreateOrConnectWithoutEmojimoodInput: { // input type
+    create: NexusGenInputs['ProfileCreateWithoutEmojimoodInput']; // ProfileCreateWithoutEmojimoodInput!
+    where: NexusGenInputs['ProfileWhereUniqueInput']; // ProfileWhereUniqueInput!
+  }
+  ProfileCreateOrConnectWithoutUserInput: { // input type
+    create: NexusGenInputs['ProfileCreateWithoutUserInput']; // ProfileCreateWithoutUserInput!
+    where: NexusGenInputs['ProfileWhereUniqueInput']; // ProfileWhereUniqueInput!
   }
   ProfileCreateWithoutEmojimoodInput: { // input type
     bio?: string | null; // String
-    user: number; // Int!
     User?: NexusGenInputs['UserCreateOneWithoutProfileInput'] | null; // UserCreateOneWithoutProfileInput
   }
   ProfileCreateWithoutUserInput: { // input type
     bio?: string | null; // String
-    emojimood?: NexusGenInputs['EmojimoodCreateOneWithoutProfileInput'] | null; // EmojimoodCreateOneWithoutProfileInput
-    user: number; // Int!
+    Emojimood?: NexusGenInputs['EmojimoodCreateOneWithoutProfileInput'] | null; // EmojimoodCreateOneWithoutProfileInput
   }
   ProfileListRelationFilter: { // input type
     every?: NexusGenInputs['ProfileWhereInput'] | null; // ProfileWhereInput
     none?: NexusGenInputs['ProfileWhereInput'] | null; // ProfileWhereInput
     some?: NexusGenInputs['ProfileWhereInput'] | null; // ProfileWhereInput
   }
+  ProfileScalarWhereInput: { // input type
+    AND?: NexusGenInputs['ProfileScalarWhereInput'][] | null; // [ProfileScalarWhereInput!]
+    bio?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
+    emojimoodId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
+    id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    NOT?: NexusGenInputs['ProfileScalarWhereInput'][] | null; // [ProfileScalarWhereInput!]
+    OR?: NexusGenInputs['ProfileScalarWhereInput'][] | null; // [ProfileScalarWhereInput!]
+    userId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
+  }
+  ProfileUpdateInput: { // input type
+    bio?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    Emojimood?: NexusGenInputs['EmojimoodUpdateOneWithoutProfileInput'] | null; // EmojimoodUpdateOneWithoutProfileInput
+    User?: NexusGenInputs['UserUpdateOneWithoutProfileInput'] | null; // UserUpdateOneWithoutProfileInput
+  }
+  ProfileUpdateManyMutationInput: { // input type
+    bio?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+  }
+  ProfileUpdateManyWithWhereWithoutEmojimoodInput: { // input type
+    data: NexusGenInputs['ProfileUpdateManyMutationInput']; // ProfileUpdateManyMutationInput!
+    where: NexusGenInputs['ProfileScalarWhereInput']; // ProfileScalarWhereInput!
+  }
+  ProfileUpdateManyWithoutEmojimoodInput: { // input type
+    connect?: NexusGenInputs['ProfileWhereUniqueInput'][] | null; // [ProfileWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['ProfileCreateOrConnectWithoutEmojimoodInput'][] | null; // [ProfileCreateOrConnectWithoutEmojimoodInput!]
+    create?: NexusGenInputs['ProfileCreateWithoutEmojimoodInput'][] | null; // [ProfileCreateWithoutEmojimoodInput!]
+    delete?: NexusGenInputs['ProfileWhereUniqueInput'][] | null; // [ProfileWhereUniqueInput!]
+    deleteMany?: NexusGenInputs['ProfileScalarWhereInput'][] | null; // [ProfileScalarWhereInput!]
+    disconnect?: NexusGenInputs['ProfileWhereUniqueInput'][] | null; // [ProfileWhereUniqueInput!]
+    set?: NexusGenInputs['ProfileWhereUniqueInput'][] | null; // [ProfileWhereUniqueInput!]
+    update?: NexusGenInputs['ProfileUpdateWithWhereUniqueWithoutEmojimoodInput'][] | null; // [ProfileUpdateWithWhereUniqueWithoutEmojimoodInput!]
+    updateMany?: NexusGenInputs['ProfileUpdateManyWithWhereWithoutEmojimoodInput'][] | null; // [ProfileUpdateManyWithWhereWithoutEmojimoodInput!]
+    upsert?: NexusGenInputs['ProfileUpsertWithWhereUniqueWithoutEmojimoodInput'][] | null; // [ProfileUpsertWithWhereUniqueWithoutEmojimoodInput!]
+  }
   ProfileUpdateOneWithoutUserInput: { // input type
     connect?: NexusGenInputs['ProfileWhereUniqueInput'] | null; // ProfileWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['ProfileCreateOrConnectWithoutUserInput'] | null; // ProfileCreateOrConnectWithoutUserInput
     create?: NexusGenInputs['ProfileCreateWithoutUserInput'] | null; // ProfileCreateWithoutUserInput
     delete?: boolean | null; // Boolean
     disconnect?: boolean | null; // Boolean
-    update?: NexusGenInputs['ProfileUpdateWithoutUserDataInput'] | null; // ProfileUpdateWithoutUserDataInput
+    update?: NexusGenInputs['ProfileUpdateWithoutUserInput'] | null; // ProfileUpdateWithoutUserInput
     upsert?: NexusGenInputs['ProfileUpsertWithoutUserInput'] | null; // ProfileUpsertWithoutUserInput
   }
-  ProfileUpdateWithoutUserDataInput: { // input type
+  ProfileUpdateWithWhereUniqueWithoutEmojimoodInput: { // input type
+    data: NexusGenInputs['ProfileUpdateWithoutEmojimoodInput']; // ProfileUpdateWithoutEmojimoodInput!
+    where: NexusGenInputs['ProfileWhereUniqueInput']; // ProfileWhereUniqueInput!
+  }
+  ProfileUpdateWithoutEmojimoodInput: { // input type
     bio?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
-    emojimood?: NexusGenInputs['EmojimoodUpdateOneWithoutProfileInput'] | null; // EmojimoodUpdateOneWithoutProfileInput
-    user?: NexusGenInputs['IntFieldUpdateOperationsInput'] | null; // IntFieldUpdateOperationsInput
+    User?: NexusGenInputs['UserUpdateOneWithoutProfileInput'] | null; // UserUpdateOneWithoutProfileInput
+  }
+  ProfileUpdateWithoutUserInput: { // input type
+    bio?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    Emojimood?: NexusGenInputs['EmojimoodUpdateOneWithoutProfileInput'] | null; // EmojimoodUpdateOneWithoutProfileInput
+  }
+  ProfileUpsertWithWhereUniqueWithoutEmojimoodInput: { // input type
+    create: NexusGenInputs['ProfileCreateWithoutEmojimoodInput']; // ProfileCreateWithoutEmojimoodInput!
+    update: NexusGenInputs['ProfileUpdateWithoutEmojimoodInput']; // ProfileUpdateWithoutEmojimoodInput!
+    where: NexusGenInputs['ProfileWhereUniqueInput']; // ProfileWhereUniqueInput!
   }
   ProfileUpsertWithoutUserInput: { // input type
     create: NexusGenInputs['ProfileCreateWithoutUserInput']; // ProfileCreateWithoutUserInput!
-    update: NexusGenInputs['ProfileUpdateWithoutUserDataInput']; // ProfileUpdateWithoutUserDataInput!
+    update: NexusGenInputs['ProfileUpdateWithoutUserInput']; // ProfileUpdateWithoutUserInput!
   }
   ProfileWhereInput: { // input type
     AND?: NexusGenInputs['ProfileWhereInput'][] | null; // [ProfileWhereInput!]
     bio?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
-    emojimood?: NexusGenInputs['EmojimoodWhereInput'] | null; // EmojimoodWhereInput
+    Emojimood?: NexusGenInputs['EmojimoodWhereInput'] | null; // EmojimoodWhereInput
     emojimoodId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
     NOT?: NexusGenInputs['ProfileWhereInput'][] | null; // [ProfileWhereInput!]
     OR?: NexusGenInputs['ProfileWhereInput'][] | null; // [ProfileWhereInput!]
-    user?: NexusGenInputs['IntFilter'] | null; // IntFilter
     User?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
     userId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
   }
   ProfileWhereUniqueInput: { // input type
     id?: number | null; // Int
-    user?: number | null; // Int
     userId?: number | null; // Int
   }
   StringFieldUpdateOperationsInput: { // input type
@@ -248,123 +440,91 @@ export interface NexusGenInputs {
     startsWith?: string | null; // String
   }
   UserCreateInput: { // input type
+    BusinessAccount?: NexusGenInputs['BusinessAccountCreateOneWithoutUserInput'] | null; // BusinessAccountCreateOneWithoutUserInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
     name?: string | null; // String
     profile?: NexusGenInputs['ProfileCreateOneWithoutUserInput'] | null; // ProfileCreateOneWithoutUserInput
-    VenueAdministration?: NexusGenInputs['VenueAdministrationCreateManyWithoutAdminsInput'] | null; // VenueAdministrationCreateManyWithoutAdminsInput
-    venues?: NexusGenInputs['VenueCreateManyWithoutUserInput'] | null; // VenueCreateManyWithoutUserInput
   }
-  UserCreateManyWithoutVenueAdministrationInput: { // input type
-    connect?: NexusGenInputs['UserWhereUniqueInput'][] | null; // [UserWhereUniqueInput!]
-    create?: NexusGenInputs['UserCreateWithoutVenueAdministrationInput'][] | null; // [UserCreateWithoutVenueAdministrationInput!]
+  UserCreateOneWithoutBusinessAccountInput: { // input type
+    connect?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutBusinessAccountInput'] | null; // UserCreateOrConnectWithoutBusinessAccountInput
+    create?: NexusGenInputs['UserCreateWithoutBusinessAccountInput'] | null; // UserCreateWithoutBusinessAccountInput
   }
   UserCreateOneWithoutProfileInput: { // input type
     connect?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutprofileInput'] | null; // UserCreateOrConnectWithoutprofileInput
     create?: NexusGenInputs['UserCreateWithoutProfileInput'] | null; // UserCreateWithoutProfileInput
   }
-  UserCreateOneWithoutVenuesInput: { // input type
-    connect?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
-    create?: NexusGenInputs['UserCreateWithoutVenuesInput'] | null; // UserCreateWithoutVenuesInput
+  UserCreateOrConnectWithoutBusinessAccountInput: { // input type
+    create: NexusGenInputs['UserCreateWithoutBusinessAccountInput']; // UserCreateWithoutBusinessAccountInput!
+    where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
+  }
+  UserCreateOrConnectWithoutprofileInput: { // input type
+    create: NexusGenInputs['UserCreateWithoutProfileInput']; // UserCreateWithoutProfileInput!
+    where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
+  }
+  UserCreateWithoutBusinessAccountInput: { // input type
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    email: string; // String!
+    name?: string | null; // String
+    profile?: NexusGenInputs['ProfileCreateOneWithoutUserInput'] | null; // ProfileCreateOneWithoutUserInput
   }
   UserCreateWithoutProfileInput: { // input type
+    BusinessAccount?: NexusGenInputs['BusinessAccountCreateOneWithoutUserInput'] | null; // BusinessAccountCreateOneWithoutUserInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     email: string; // String!
     name?: string | null; // String
-    VenueAdministration?: NexusGenInputs['VenueAdministrationCreateManyWithoutAdminsInput'] | null; // VenueAdministrationCreateManyWithoutAdminsInput
-    venues?: NexusGenInputs['VenueCreateManyWithoutUserInput'] | null; // VenueCreateManyWithoutUserInput
-  }
-  UserCreateWithoutVenueAdministrationInput: { // input type
-    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
-    email: string; // String!
-    name?: string | null; // String
-    profile?: NexusGenInputs['ProfileCreateOneWithoutUserInput'] | null; // ProfileCreateOneWithoutUserInput
-    venues?: NexusGenInputs['VenueCreateManyWithoutUserInput'] | null; // VenueCreateManyWithoutUserInput
-  }
-  UserCreateWithoutVenuesInput: { // input type
-    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
-    email: string; // String!
-    name?: string | null; // String
-    profile?: NexusGenInputs['ProfileCreateOneWithoutUserInput'] | null; // ProfileCreateOneWithoutUserInput
-    VenueAdministration?: NexusGenInputs['VenueAdministrationCreateManyWithoutAdminsInput'] | null; // VenueAdministrationCreateManyWithoutAdminsInput
-  }
-  UserListRelationFilter: { // input type
-    every?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
-    none?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
-    some?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
-  }
-  UserScalarWhereInput: { // input type
-    AND?: NexusGenInputs['UserScalarWhereInput'][] | null; // [UserScalarWhereInput!]
-    createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
-    email?: NexusGenInputs['StringFilter'] | null; // StringFilter
-    id?: NexusGenInputs['IntFilter'] | null; // IntFilter
-    name?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
-    NOT?: NexusGenInputs['UserScalarWhereInput'][] | null; // [UserScalarWhereInput!]
-    OR?: NexusGenInputs['UserScalarWhereInput'][] | null; // [UserScalarWhereInput!]
   }
   UserUpdateInput: { // input type
+    BusinessAccount?: NexusGenInputs['BusinessAccountUpdateOneWithoutUserInput'] | null; // BusinessAccountUpdateOneWithoutUserInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     profile?: NexusGenInputs['ProfileUpdateOneWithoutUserInput'] | null; // ProfileUpdateOneWithoutUserInput
-    VenueAdministration?: NexusGenInputs['VenueAdministrationUpdateManyWithoutAdminsInput'] | null; // VenueAdministrationUpdateManyWithoutAdminsInput
-    venues?: NexusGenInputs['VenueUpdateManyWithoutUserInput'] | null; // VenueUpdateManyWithoutUserInput
   }
-  UserUpdateManyDataInput: { // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
-    email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
-    name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
-  }
-  UserUpdateManyWithWhereNestedInput: { // input type
-    data: NexusGenInputs['UserUpdateManyDataInput']; // UserUpdateManyDataInput!
-    where: NexusGenInputs['UserScalarWhereInput']; // UserScalarWhereInput!
-  }
-  UserUpdateManyWithoutVenueAdministrationInput: { // input type
-    connect?: NexusGenInputs['UserWhereUniqueInput'][] | null; // [UserWhereUniqueInput!]
-    create?: NexusGenInputs['UserCreateWithoutVenueAdministrationInput'][] | null; // [UserCreateWithoutVenueAdministrationInput!]
-    delete?: NexusGenInputs['UserWhereUniqueInput'][] | null; // [UserWhereUniqueInput!]
-    deleteMany?: NexusGenInputs['UserScalarWhereInput'][] | null; // [UserScalarWhereInput!]
-    disconnect?: NexusGenInputs['UserWhereUniqueInput'][] | null; // [UserWhereUniqueInput!]
-    set?: NexusGenInputs['UserWhereUniqueInput'][] | null; // [UserWhereUniqueInput!]
-    update?: NexusGenInputs['UserUpdateWithWhereUniqueWithoutVenueAdministrationInput'][] | null; // [UserUpdateWithWhereUniqueWithoutVenueAdministrationInput!]
-    updateMany?: NexusGenInputs['UserUpdateManyWithWhereNestedInput'][] | null; // [UserUpdateManyWithWhereNestedInput!]
-    upsert?: NexusGenInputs['UserUpsertWithWhereUniqueWithoutVenueAdministrationInput'][] | null; // [UserUpsertWithWhereUniqueWithoutVenueAdministrationInput!]
-  }
-  UserUpdateOneRequiredWithoutVenuesInput: { // input type
+  UserUpdateOneWithoutBusinessAccountInput: { // input type
     connect?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
-    create?: NexusGenInputs['UserCreateWithoutVenuesInput'] | null; // UserCreateWithoutVenuesInput
-    update?: NexusGenInputs['UserUpdateWithoutVenuesDataInput'] | null; // UserUpdateWithoutVenuesDataInput
-    upsert?: NexusGenInputs['UserUpsertWithoutVenuesInput'] | null; // UserUpsertWithoutVenuesInput
+    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutBusinessAccountInput'] | null; // UserCreateOrConnectWithoutBusinessAccountInput
+    create?: NexusGenInputs['UserCreateWithoutBusinessAccountInput'] | null; // UserCreateWithoutBusinessAccountInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['UserUpdateWithoutBusinessAccountInput'] | null; // UserUpdateWithoutBusinessAccountInput
+    upsert?: NexusGenInputs['UserUpsertWithoutBusinessAccountInput'] | null; // UserUpsertWithoutBusinessAccountInput
   }
-  UserUpdateWithWhereUniqueWithoutVenueAdministrationInput: { // input type
-    data: NexusGenInputs['UserUpdateWithoutVenueAdministrationDataInput']; // UserUpdateWithoutVenueAdministrationDataInput!
-    where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
+  UserUpdateOneWithoutProfileInput: { // input type
+    connect?: NexusGenInputs['UserWhereUniqueInput'] | null; // UserWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['UserCreateOrConnectWithoutprofileInput'] | null; // UserCreateOrConnectWithoutprofileInput
+    create?: NexusGenInputs['UserCreateWithoutProfileInput'] | null; // UserCreateWithoutProfileInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['UserUpdateWithoutProfileInput'] | null; // UserUpdateWithoutProfileInput
+    upsert?: NexusGenInputs['UserUpsertWithoutProfileInput'] | null; // UserUpsertWithoutProfileInput
   }
-  UserUpdateWithoutVenueAdministrationDataInput: { // input type
+  UserUpdateWithoutBusinessAccountInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     profile?: NexusGenInputs['ProfileUpdateOneWithoutUserInput'] | null; // ProfileUpdateOneWithoutUserInput
-    venues?: NexusGenInputs['VenueUpdateManyWithoutUserInput'] | null; // VenueUpdateManyWithoutUserInput
   }
-  UserUpdateWithoutVenuesDataInput: { // input type
+  UserUpdateWithoutProfileInput: { // input type
+    BusinessAccount?: NexusGenInputs['BusinessAccountUpdateOneWithoutUserInput'] | null; // BusinessAccountUpdateOneWithoutUserInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     email?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
     name?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
-    profile?: NexusGenInputs['ProfileUpdateOneWithoutUserInput'] | null; // ProfileUpdateOneWithoutUserInput
-    VenueAdministration?: NexusGenInputs['VenueAdministrationUpdateManyWithoutAdminsInput'] | null; // VenueAdministrationUpdateManyWithoutAdminsInput
   }
-  UserUpsertWithWhereUniqueWithoutVenueAdministrationInput: { // input type
-    create: NexusGenInputs['UserCreateWithoutVenueAdministrationInput']; // UserCreateWithoutVenueAdministrationInput!
-    update: NexusGenInputs['UserUpdateWithoutVenueAdministrationDataInput']; // UserUpdateWithoutVenueAdministrationDataInput!
-    where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
+  UserUpsertWithoutBusinessAccountInput: { // input type
+    create: NexusGenInputs['UserCreateWithoutBusinessAccountInput']; // UserCreateWithoutBusinessAccountInput!
+    update: NexusGenInputs['UserUpdateWithoutBusinessAccountInput']; // UserUpdateWithoutBusinessAccountInput!
   }
-  UserUpsertWithoutVenuesInput: { // input type
-    create: NexusGenInputs['UserCreateWithoutVenuesInput']; // UserCreateWithoutVenuesInput!
-    update: NexusGenInputs['UserUpdateWithoutVenuesDataInput']; // UserUpdateWithoutVenuesDataInput!
+  UserUpsertWithoutProfileInput: { // input type
+    create: NexusGenInputs['UserCreateWithoutProfileInput']; // UserCreateWithoutProfileInput!
+    update: NexusGenInputs['UserUpdateWithoutProfileInput']; // UserUpdateWithoutProfileInput!
   }
   UserWhereInput: { // input type
     AND?: NexusGenInputs['UserWhereInput'][] | null; // [UserWhereInput!]
+    BusinessAccount?: NexusGenInputs['BusinessAccountWhereInput'] | null; // BusinessAccountWhereInput
+    businessAccountId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
     email?: NexusGenInputs['StringFilter'] | null; // StringFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
@@ -372,26 +532,37 @@ export interface NexusGenInputs {
     NOT?: NexusGenInputs['UserWhereInput'][] | null; // [UserWhereInput!]
     OR?: NexusGenInputs['UserWhereInput'][] | null; // [UserWhereInput!]
     profile?: NexusGenInputs['ProfileWhereInput'] | null; // ProfileWhereInput
-    VenueAdministration?: NexusGenInputs['VenueAdministrationListRelationFilter'] | null; // VenueAdministrationListRelationFilter
-    venues?: NexusGenInputs['VenueListRelationFilter'] | null; // VenueListRelationFilter
   }
   UserWhereUniqueInput: { // input type
+    businessAccountId?: number | null; // Int
     email?: string | null; // String
     id?: number | null; // Int
   }
-  VenueAdministrationCreateManyWithoutAdminsInput: { // input type
+  VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput: { // input type
     connect?: NexusGenInputs['VenueAdministrationWhereUniqueInput'][] | null; // [VenueAdministrationWhereUniqueInput!]
-    create?: NexusGenInputs['VenueAdministrationCreateWithoutAdminsInput'][] | null; // [VenueAdministrationCreateWithoutAdminsInput!]
+    connectOrCreate?: NexusGenInputs['VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput'][] | null; // [VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput!]
+    create?: NexusGenInputs['VenueAdministrationCreateWithoutAdminsBusinessAccountInput'][] | null; // [VenueAdministrationCreateWithoutAdminsBusinessAccountInput!]
   }
   VenueAdministrationCreateOneWithoutVenueInput: { // input type
     connect?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['VenueAdministrationCreateOrConnectWithoutVenueInput'] | null; // VenueAdministrationCreateOrConnectWithoutVenueInput
     create?: NexusGenInputs['VenueAdministrationCreateWithoutVenueInput'] | null; // VenueAdministrationCreateWithoutVenueInput
   }
-  VenueAdministrationCreateWithoutAdminsInput: { // input type
-    venue?: NexusGenInputs['VenueCreateOneWithoutVenueAdministrationInput'] | null; // VenueCreateOneWithoutVenueAdministrationInput
+  VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput: { // input type
+    create: NexusGenInputs['VenueAdministrationCreateWithoutAdminsBusinessAccountInput']; // VenueAdministrationCreateWithoutAdminsBusinessAccountInput!
+    where: NexusGenInputs['VenueAdministrationWhereUniqueInput']; // VenueAdministrationWhereUniqueInput!
+  }
+  VenueAdministrationCreateOrConnectWithoutVenueInput: { // input type
+    create: NexusGenInputs['VenueAdministrationCreateWithoutVenueInput']; // VenueAdministrationCreateWithoutVenueInput!
+    where: NexusGenInputs['VenueAdministrationWhereUniqueInput']; // VenueAdministrationWhereUniqueInput!
+  }
+  VenueAdministrationCreateWithoutAdminsBusinessAccountInput: { // input type
+    knalb?: string | null; // String
+    Venue?: NexusGenInputs['VenueCreateOneWithoutVenueAdministrationInput'] | null; // VenueCreateOneWithoutVenueAdministrationInput
   }
   VenueAdministrationCreateWithoutVenueInput: { // input type
-    admins?: NexusGenInputs['UserCreateManyWithoutVenueAdministrationInput'] | null; // UserCreateManyWithoutVenueAdministrationInput
+    AdminsBusinessAccount?: NexusGenInputs['BusinessAccountCreateManyWithoutVenueAdministrationInput'] | null; // BusinessAccountCreateManyWithoutVenueAdministrationInput
+    knalb?: string | null; // String
   }
   VenueAdministrationListRelationFilter: { // input type
     every?: NexusGenInputs['VenueAdministrationWhereInput'] | null; // VenueAdministrationWhereInput
@@ -401,103 +572,134 @@ export interface NexusGenInputs {
   VenueAdministrationScalarWhereInput: { // input type
     AND?: NexusGenInputs['VenueAdministrationScalarWhereInput'][] | null; // [VenueAdministrationScalarWhereInput!]
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    knalb?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     NOT?: NexusGenInputs['VenueAdministrationScalarWhereInput'][] | null; // [VenueAdministrationScalarWhereInput!]
     OR?: NexusGenInputs['VenueAdministrationScalarWhereInput'][] | null; // [VenueAdministrationScalarWhereInput!]
   }
-  VenueAdministrationUpdateManyWithWhereNestedInput: { // input type
-    data: NexusGenInputs['VenueAdministrationUpdateManyDataInput']; // VenueAdministrationUpdateManyDataInput!
+  VenueAdministrationUpdateManyMutationInput: { // input type
+    knalb?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+  }
+  VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput: { // input type
+    data: NexusGenInputs['VenueAdministrationUpdateManyMutationInput']; // VenueAdministrationUpdateManyMutationInput!
     where: NexusGenInputs['VenueAdministrationScalarWhereInput']; // VenueAdministrationScalarWhereInput!
   }
-  VenueAdministrationUpdateManyWithoutAdminsInput: { // input type
+  VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput: { // input type
     connect?: NexusGenInputs['VenueAdministrationWhereUniqueInput'][] | null; // [VenueAdministrationWhereUniqueInput!]
-    create?: NexusGenInputs['VenueAdministrationCreateWithoutAdminsInput'][] | null; // [VenueAdministrationCreateWithoutAdminsInput!]
+    connectOrCreate?: NexusGenInputs['VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput'][] | null; // [VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput!]
+    create?: NexusGenInputs['VenueAdministrationCreateWithoutAdminsBusinessAccountInput'][] | null; // [VenueAdministrationCreateWithoutAdminsBusinessAccountInput!]
     delete?: NexusGenInputs['VenueAdministrationWhereUniqueInput'][] | null; // [VenueAdministrationWhereUniqueInput!]
     deleteMany?: NexusGenInputs['VenueAdministrationScalarWhereInput'][] | null; // [VenueAdministrationScalarWhereInput!]
     disconnect?: NexusGenInputs['VenueAdministrationWhereUniqueInput'][] | null; // [VenueAdministrationWhereUniqueInput!]
     set?: NexusGenInputs['VenueAdministrationWhereUniqueInput'][] | null; // [VenueAdministrationWhereUniqueInput!]
-    update?: NexusGenInputs['VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput'][] | null; // [VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput!]
-    updateMany?: NexusGenInputs['VenueAdministrationUpdateManyWithWhereNestedInput'][] | null; // [VenueAdministrationUpdateManyWithWhereNestedInput!]
-    upsert?: NexusGenInputs['VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput'][] | null; // [VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput!]
+    update?: NexusGenInputs['VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput'][] | null; // [VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput!]
+    updateMany?: NexusGenInputs['VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput'][] | null; // [VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput!]
+    upsert?: NexusGenInputs['VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput'][] | null; // [VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput!]
   }
   VenueAdministrationUpdateOneRequiredWithoutVenueInput: { // input type
     connect?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['VenueAdministrationCreateOrConnectWithoutVenueInput'] | null; // VenueAdministrationCreateOrConnectWithoutVenueInput
     create?: NexusGenInputs['VenueAdministrationCreateWithoutVenueInput'] | null; // VenueAdministrationCreateWithoutVenueInput
-    update?: NexusGenInputs['VenueAdministrationUpdateWithoutVenueDataInput'] | null; // VenueAdministrationUpdateWithoutVenueDataInput
+    update?: NexusGenInputs['VenueAdministrationUpdateWithoutVenueInput'] | null; // VenueAdministrationUpdateWithoutVenueInput
     upsert?: NexusGenInputs['VenueAdministrationUpsertWithoutVenueInput'] | null; // VenueAdministrationUpsertWithoutVenueInput
   }
-  VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput: { // input type
-    data: NexusGenInputs['VenueAdministrationUpdateWithoutAdminsDataInput']; // VenueAdministrationUpdateWithoutAdminsDataInput!
+  VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput: { // input type
+    data: NexusGenInputs['VenueAdministrationUpdateWithoutAdminsBusinessAccountInput']; // VenueAdministrationUpdateWithoutAdminsBusinessAccountInput!
     where: NexusGenInputs['VenueAdministrationWhereUniqueInput']; // VenueAdministrationWhereUniqueInput!
   }
-  VenueAdministrationUpdateWithoutAdminsDataInput: { // input type
-    venue?: NexusGenInputs['VenueUpdateOneWithoutVenueAdministrationInput'] | null; // VenueUpdateOneWithoutVenueAdministrationInput
+  VenueAdministrationUpdateWithoutAdminsBusinessAccountInput: { // input type
+    knalb?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
+    Venue?: NexusGenInputs['VenueUpdateOneWithoutVenueAdministrationInput'] | null; // VenueUpdateOneWithoutVenueAdministrationInput
   }
-  VenueAdministrationUpdateWithoutVenueDataInput: { // input type
-    admins?: NexusGenInputs['UserUpdateManyWithoutVenueAdministrationInput'] | null; // UserUpdateManyWithoutVenueAdministrationInput
+  VenueAdministrationUpdateWithoutVenueInput: { // input type
+    AdminsBusinessAccount?: NexusGenInputs['BusinessAccountUpdateManyWithoutVenueAdministrationInput'] | null; // BusinessAccountUpdateManyWithoutVenueAdministrationInput
+    knalb?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
   }
-  VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput: { // input type
-    create: NexusGenInputs['VenueAdministrationCreateWithoutAdminsInput']; // VenueAdministrationCreateWithoutAdminsInput!
-    update: NexusGenInputs['VenueAdministrationUpdateWithoutAdminsDataInput']; // VenueAdministrationUpdateWithoutAdminsDataInput!
+  VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput: { // input type
+    create: NexusGenInputs['VenueAdministrationCreateWithoutAdminsBusinessAccountInput']; // VenueAdministrationCreateWithoutAdminsBusinessAccountInput!
+    update: NexusGenInputs['VenueAdministrationUpdateWithoutAdminsBusinessAccountInput']; // VenueAdministrationUpdateWithoutAdminsBusinessAccountInput!
     where: NexusGenInputs['VenueAdministrationWhereUniqueInput']; // VenueAdministrationWhereUniqueInput!
   }
   VenueAdministrationUpsertWithoutVenueInput: { // input type
     create: NexusGenInputs['VenueAdministrationCreateWithoutVenueInput']; // VenueAdministrationCreateWithoutVenueInput!
-    update: NexusGenInputs['VenueAdministrationUpdateWithoutVenueDataInput']; // VenueAdministrationUpdateWithoutVenueDataInput!
+    update: NexusGenInputs['VenueAdministrationUpdateWithoutVenueInput']; // VenueAdministrationUpdateWithoutVenueInput!
   }
   VenueAdministrationWhereInput: { // input type
-    admins?: NexusGenInputs['UserListRelationFilter'] | null; // UserListRelationFilter
+    AdminsBusinessAccount?: NexusGenInputs['BusinessAccountListRelationFilter'] | null; // BusinessAccountListRelationFilter
     AND?: NexusGenInputs['VenueAdministrationWhereInput'][] | null; // [VenueAdministrationWhereInput!]
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
+    knalb?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     NOT?: NexusGenInputs['VenueAdministrationWhereInput'][] | null; // [VenueAdministrationWhereInput!]
     OR?: NexusGenInputs['VenueAdministrationWhereInput'][] | null; // [VenueAdministrationWhereInput!]
-    venue?: NexusGenInputs['VenueWhereInput'] | null; // VenueWhereInput
+    Venue?: NexusGenInputs['VenueWhereInput'] | null; // VenueWhereInput
   }
   VenueAdministrationWhereUniqueInput: { // input type
     id?: number | null; // Int
   }
-  VenueCreateManyWithoutUserInput: { // input type
+  VenueCreateInput: { // input type
+    businessAccount?: NexusGenInputs['BusinessAccountCreateOneWithoutVenueInput'] | null; // BusinessAccountCreateOneWithoutVenueInput
+    createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
+    VenueAdministration: NexusGenInputs['VenueAdministrationCreateOneWithoutVenueInput']; // VenueAdministrationCreateOneWithoutVenueInput!
+    VenueDetails: NexusGenInputs['VenueDetailsCreateOneWithoutVenueInput']; // VenueDetailsCreateOneWithoutVenueInput!
+  }
+  VenueCreateManyWithoutBusinessAccountInput: { // input type
     connect?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
-    create?: NexusGenInputs['VenueCreateWithoutUserInput'][] | null; // [VenueCreateWithoutUserInput!]
+    connectOrCreate?: NexusGenInputs['VenueCreateOrConnectWithoutbusinessAccountInput'][] | null; // [VenueCreateOrConnectWithoutbusinessAccountInput!]
+    create?: NexusGenInputs['VenueCreateWithoutBusinessAccountInput'][] | null; // [VenueCreateWithoutBusinessAccountInput!]
   }
   VenueCreateOneWithoutVenueAdministrationInput: { // input type
     connect?: NexusGenInputs['VenueWhereUniqueInput'] | null; // VenueWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['VenueCreateOrConnectWithoutVenueAdministrationInput'] | null; // VenueCreateOrConnectWithoutVenueAdministrationInput
     create?: NexusGenInputs['VenueCreateWithoutVenueAdministrationInput'] | null; // VenueCreateWithoutVenueAdministrationInput
   }
-  VenueCreateWithoutUserInput: { // input type
+  VenueCreateOrConnectWithoutVenueAdministrationInput: { // input type
+    create: NexusGenInputs['VenueCreateWithoutVenueAdministrationInput']; // VenueCreateWithoutVenueAdministrationInput!
+    where: NexusGenInputs['VenueWhereUniqueInput']; // VenueWhereUniqueInput!
+  }
+  VenueCreateOrConnectWithoutbusinessAccountInput: { // input type
+    create: NexusGenInputs['VenueCreateWithoutBusinessAccountInput']; // VenueCreateWithoutBusinessAccountInput!
+    where: NexusGenInputs['VenueWhereUniqueInput']; // VenueWhereUniqueInput!
+  }
+  VenueCreateWithoutBusinessAccountInput: { // input type
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
     VenueAdministration: NexusGenInputs['VenueAdministrationCreateOneWithoutVenueInput']; // VenueAdministrationCreateOneWithoutVenueInput!
     VenueDetails: NexusGenInputs['VenueDetailsCreateOneWithoutVenueInput']; // VenueDetailsCreateOneWithoutVenueInput!
   }
   VenueCreateWithoutVenueAdministrationInput: { // input type
+    businessAccount?: NexusGenInputs['BusinessAccountCreateOneWithoutVenueInput'] | null; // BusinessAccountCreateOneWithoutVenueInput
     createdAt?: NexusGenScalars['DateTime'] | null; // DateTime
-    User: NexusGenInputs['UserCreateOneWithoutVenuesInput']; // UserCreateOneWithoutVenuesInput!
     VenueDetails: NexusGenInputs['VenueDetailsCreateOneWithoutVenueInput']; // VenueDetailsCreateOneWithoutVenueInput!
   }
   VenueDetailsCreateOneWithoutVenueInput: { // input type
     connect?: NexusGenInputs['VenueDetailsWhereUniqueInput'] | null; // VenueDetailsWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['VenueDetailsCreateOrConnectWithoutVenueInput'] | null; // VenueDetailsCreateOrConnectWithoutVenueInput
     create?: NexusGenInputs['VenueDetailsCreateWithoutVenueInput'] | null; // VenueDetailsCreateWithoutVenueInput
   }
+  VenueDetailsCreateOrConnectWithoutVenueInput: { // input type
+    create: NexusGenInputs['VenueDetailsCreateWithoutVenueInput']; // VenueDetailsCreateWithoutVenueInput!
+    where: NexusGenInputs['VenueDetailsWhereUniqueInput']; // VenueDetailsWhereUniqueInput!
+  }
   VenueDetailsCreateWithoutVenueInput: { // input type
-    description: string; // String!
+    description?: string | null; // String
     name: string; // String!
   }
   VenueDetailsUpdateOneRequiredWithoutVenueInput: { // input type
     connect?: NexusGenInputs['VenueDetailsWhereUniqueInput'] | null; // VenueDetailsWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['VenueDetailsCreateOrConnectWithoutVenueInput'] | null; // VenueDetailsCreateOrConnectWithoutVenueInput
     create?: NexusGenInputs['VenueDetailsCreateWithoutVenueInput'] | null; // VenueDetailsCreateWithoutVenueInput
-    update?: NexusGenInputs['VenueDetailsUpdateWithoutVenueDataInput'] | null; // VenueDetailsUpdateWithoutVenueDataInput
+    update?: NexusGenInputs['VenueDetailsUpdateWithoutVenueInput'] | null; // VenueDetailsUpdateWithoutVenueInput
     upsert?: NexusGenInputs['VenueDetailsUpsertWithoutVenueInput'] | null; // VenueDetailsUpsertWithoutVenueInput
   }
-  VenueDetailsUpdateWithoutVenueDataInput: { // input type
-    description?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
+  VenueDetailsUpdateWithoutVenueInput: { // input type
+    description?: NexusGenInputs['NullableStringFieldUpdateOperationsInput'] | null; // NullableStringFieldUpdateOperationsInput
     name?: NexusGenInputs['StringFieldUpdateOperationsInput'] | null; // StringFieldUpdateOperationsInput
   }
   VenueDetailsUpsertWithoutVenueInput: { // input type
     create: NexusGenInputs['VenueDetailsCreateWithoutVenueInput']; // VenueDetailsCreateWithoutVenueInput!
-    update: NexusGenInputs['VenueDetailsUpdateWithoutVenueDataInput']; // VenueDetailsUpdateWithoutVenueDataInput!
+    update: NexusGenInputs['VenueDetailsUpdateWithoutVenueInput']; // VenueDetailsUpdateWithoutVenueInput!
   }
   VenueDetailsWhereInput: { // input type
     AND?: NexusGenInputs['VenueDetailsWhereInput'][] | null; // [VenueDetailsWhereInput!]
-    description?: NexusGenInputs['StringFilter'] | null; // StringFilter
+    description?: NexusGenInputs['StringNullableFilter'] | null; // StringNullableFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
     name?: NexusGenInputs['StringFilter'] | null; // StringFilter
     NOT?: NexusGenInputs['VenueDetailsWhereInput'][] | null; // [VenueDetailsWhereInput!]
@@ -514,71 +716,79 @@ export interface NexusGenInputs {
   }
   VenueScalarWhereInput: { // input type
     AND?: NexusGenInputs['VenueScalarWhereInput'][] | null; // [VenueScalarWhereInput!]
+    businessAccountId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
     NOT?: NexusGenInputs['VenueScalarWhereInput'][] | null; // [VenueScalarWhereInput!]
     OR?: NexusGenInputs['VenueScalarWhereInput'][] | null; // [VenueScalarWhereInput!]
-    userId?: NexusGenInputs['IntFilter'] | null; // IntFilter
     venueAdministrationId?: NexusGenInputs['IntFilter'] | null; // IntFilter
     venueDetailsId?: NexusGenInputs['IntFilter'] | null; // IntFilter
   }
-  VenueUpdateManyDataInput: { // input type
-    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
-  }
-  VenueUpdateManyWithWhereNestedInput: { // input type
-    data: NexusGenInputs['VenueUpdateManyDataInput']; // VenueUpdateManyDataInput!
-    where: NexusGenInputs['VenueScalarWhereInput']; // VenueScalarWhereInput!
-  }
-  VenueUpdateManyWithoutUserInput: { // input type
-    connect?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
-    create?: NexusGenInputs['VenueCreateWithoutUserInput'][] | null; // [VenueCreateWithoutUserInput!]
-    delete?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
-    deleteMany?: NexusGenInputs['VenueScalarWhereInput'][] | null; // [VenueScalarWhereInput!]
-    disconnect?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
-    set?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
-    update?: NexusGenInputs['VenueUpdateWithWhereUniqueWithoutUserInput'][] | null; // [VenueUpdateWithWhereUniqueWithoutUserInput!]
-    updateMany?: NexusGenInputs['VenueUpdateManyWithWhereNestedInput'][] | null; // [VenueUpdateManyWithWhereNestedInput!]
-    upsert?: NexusGenInputs['VenueUpsertWithWhereUniqueWithoutUserInput'][] | null; // [VenueUpsertWithWhereUniqueWithoutUserInput!]
-  }
-  VenueUpdateOneWithoutVenueAdministrationInput: { // input type
-    connect?: NexusGenInputs['VenueWhereUniqueInput'] | null; // VenueWhereUniqueInput
-    create?: NexusGenInputs['VenueCreateWithoutVenueAdministrationInput'] | null; // VenueCreateWithoutVenueAdministrationInput
-    delete?: boolean | null; // Boolean
-    disconnect?: boolean | null; // Boolean
-    update?: NexusGenInputs['VenueUpdateWithoutVenueAdministrationDataInput'] | null; // VenueUpdateWithoutVenueAdministrationDataInput
-    upsert?: NexusGenInputs['VenueUpsertWithoutVenueAdministrationInput'] | null; // VenueUpsertWithoutVenueAdministrationInput
-  }
-  VenueUpdateWithWhereUniqueWithoutUserInput: { // input type
-    data: NexusGenInputs['VenueUpdateWithoutUserDataInput']; // VenueUpdateWithoutUserDataInput!
-    where: NexusGenInputs['VenueWhereUniqueInput']; // VenueWhereUniqueInput!
-  }
-  VenueUpdateWithoutUserDataInput: { // input type
+  VenueUpdateInput: { // input type
+    businessAccount?: NexusGenInputs['BusinessAccountUpdateOneWithoutVenueInput'] | null; // BusinessAccountUpdateOneWithoutVenueInput
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
     VenueAdministration?: NexusGenInputs['VenueAdministrationUpdateOneRequiredWithoutVenueInput'] | null; // VenueAdministrationUpdateOneRequiredWithoutVenueInput
     VenueDetails?: NexusGenInputs['VenueDetailsUpdateOneRequiredWithoutVenueInput'] | null; // VenueDetailsUpdateOneRequiredWithoutVenueInput
   }
-  VenueUpdateWithoutVenueAdministrationDataInput: { // input type
+  VenueUpdateManyMutationInput: { // input type
     createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
-    User?: NexusGenInputs['UserUpdateOneRequiredWithoutVenuesInput'] | null; // UserUpdateOneRequiredWithoutVenuesInput
+  }
+  VenueUpdateManyWithWhereWithoutBusinessAccountInput: { // input type
+    data: NexusGenInputs['VenueUpdateManyMutationInput']; // VenueUpdateManyMutationInput!
+    where: NexusGenInputs['VenueScalarWhereInput']; // VenueScalarWhereInput!
+  }
+  VenueUpdateManyWithoutBusinessAccountInput: { // input type
+    connect?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
+    connectOrCreate?: NexusGenInputs['VenueCreateOrConnectWithoutbusinessAccountInput'][] | null; // [VenueCreateOrConnectWithoutbusinessAccountInput!]
+    create?: NexusGenInputs['VenueCreateWithoutBusinessAccountInput'][] | null; // [VenueCreateWithoutBusinessAccountInput!]
+    delete?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
+    deleteMany?: NexusGenInputs['VenueScalarWhereInput'][] | null; // [VenueScalarWhereInput!]
+    disconnect?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
+    set?: NexusGenInputs['VenueWhereUniqueInput'][] | null; // [VenueWhereUniqueInput!]
+    update?: NexusGenInputs['VenueUpdateWithWhereUniqueWithoutBusinessAccountInput'][] | null; // [VenueUpdateWithWhereUniqueWithoutBusinessAccountInput!]
+    updateMany?: NexusGenInputs['VenueUpdateManyWithWhereWithoutBusinessAccountInput'][] | null; // [VenueUpdateManyWithWhereWithoutBusinessAccountInput!]
+    upsert?: NexusGenInputs['VenueUpsertWithWhereUniqueWithoutBusinessAccountInput'][] | null; // [VenueUpsertWithWhereUniqueWithoutBusinessAccountInput!]
+  }
+  VenueUpdateOneWithoutVenueAdministrationInput: { // input type
+    connect?: NexusGenInputs['VenueWhereUniqueInput'] | null; // VenueWhereUniqueInput
+    connectOrCreate?: NexusGenInputs['VenueCreateOrConnectWithoutVenueAdministrationInput'] | null; // VenueCreateOrConnectWithoutVenueAdministrationInput
+    create?: NexusGenInputs['VenueCreateWithoutVenueAdministrationInput'] | null; // VenueCreateWithoutVenueAdministrationInput
+    delete?: boolean | null; // Boolean
+    disconnect?: boolean | null; // Boolean
+    update?: NexusGenInputs['VenueUpdateWithoutVenueAdministrationInput'] | null; // VenueUpdateWithoutVenueAdministrationInput
+    upsert?: NexusGenInputs['VenueUpsertWithoutVenueAdministrationInput'] | null; // VenueUpsertWithoutVenueAdministrationInput
+  }
+  VenueUpdateWithWhereUniqueWithoutBusinessAccountInput: { // input type
+    data: NexusGenInputs['VenueUpdateWithoutBusinessAccountInput']; // VenueUpdateWithoutBusinessAccountInput!
+    where: NexusGenInputs['VenueWhereUniqueInput']; // VenueWhereUniqueInput!
+  }
+  VenueUpdateWithoutBusinessAccountInput: { // input type
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    VenueAdministration?: NexusGenInputs['VenueAdministrationUpdateOneRequiredWithoutVenueInput'] | null; // VenueAdministrationUpdateOneRequiredWithoutVenueInput
     VenueDetails?: NexusGenInputs['VenueDetailsUpdateOneRequiredWithoutVenueInput'] | null; // VenueDetailsUpdateOneRequiredWithoutVenueInput
   }
-  VenueUpsertWithWhereUniqueWithoutUserInput: { // input type
-    create: NexusGenInputs['VenueCreateWithoutUserInput']; // VenueCreateWithoutUserInput!
-    update: NexusGenInputs['VenueUpdateWithoutUserDataInput']; // VenueUpdateWithoutUserDataInput!
+  VenueUpdateWithoutVenueAdministrationInput: { // input type
+    businessAccount?: NexusGenInputs['BusinessAccountUpdateOneWithoutVenueInput'] | null; // BusinessAccountUpdateOneWithoutVenueInput
+    createdAt?: NexusGenInputs['DateTimeFieldUpdateOperationsInput'] | null; // DateTimeFieldUpdateOperationsInput
+    VenueDetails?: NexusGenInputs['VenueDetailsUpdateOneRequiredWithoutVenueInput'] | null; // VenueDetailsUpdateOneRequiredWithoutVenueInput
+  }
+  VenueUpsertWithWhereUniqueWithoutBusinessAccountInput: { // input type
+    create: NexusGenInputs['VenueCreateWithoutBusinessAccountInput']; // VenueCreateWithoutBusinessAccountInput!
+    update: NexusGenInputs['VenueUpdateWithoutBusinessAccountInput']; // VenueUpdateWithoutBusinessAccountInput!
     where: NexusGenInputs['VenueWhereUniqueInput']; // VenueWhereUniqueInput!
   }
   VenueUpsertWithoutVenueAdministrationInput: { // input type
     create: NexusGenInputs['VenueCreateWithoutVenueAdministrationInput']; // VenueCreateWithoutVenueAdministrationInput!
-    update: NexusGenInputs['VenueUpdateWithoutVenueAdministrationDataInput']; // VenueUpdateWithoutVenueAdministrationDataInput!
+    update: NexusGenInputs['VenueUpdateWithoutVenueAdministrationInput']; // VenueUpdateWithoutVenueAdministrationInput!
   }
   VenueWhereInput: { // input type
     AND?: NexusGenInputs['VenueWhereInput'][] | null; // [VenueWhereInput!]
+    businessAccount?: NexusGenInputs['BusinessAccountWhereInput'] | null; // BusinessAccountWhereInput
+    businessAccountId?: NexusGenInputs['IntNullableFilter'] | null; // IntNullableFilter
     createdAt?: NexusGenInputs['DateTimeFilter'] | null; // DateTimeFilter
     id?: NexusGenInputs['IntFilter'] | null; // IntFilter
     NOT?: NexusGenInputs['VenueWhereInput'][] | null; // [VenueWhereInput!]
     OR?: NexusGenInputs['VenueWhereInput'][] | null; // [VenueWhereInput!]
-    User?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
-    userId?: NexusGenInputs['IntFilter'] | null; // IntFilter
     VenueAdministration?: NexusGenInputs['VenueAdministrationWhereInput'] | null; // VenueAdministrationWhereInput
     venueAdministrationId?: NexusGenInputs['IntFilter'] | null; // IntFilter
     VenueDetails?: NexusGenInputs['VenueDetailsWhereInput'] | null; // VenueDetailsWhereInput
@@ -605,6 +815,9 @@ export interface NexusGenScalars {
 }
 
 export interface NexusGenRootTypes {
+  BusinessAccount: { // root type
+    id: number; // Int!
+  }
   Emojimood: { // root type
     colorOne: string; // String!
     colorTwo: string; // String!
@@ -613,36 +826,69 @@ export interface NexusGenRootTypes {
   Mutation: {};
   Profile: { // root type
     bio?: string | null; // String
+    emojimoodId?: number | null; // Int
     id: number; // Int!
   }
   Query: {};
   User: { // root type
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
     email: string; // String!
     id: number; // Int!
     name?: string | null; // String
   }
   Venue: { // root type
     id: number; // Int!
+    venueDetailsId: number; // Int!
+  }
+  VenueAdministration: { // root type
+    id: number; // Int!
+    knalb?: string | null; // String
   }
   VenueDetails: { // root type
-    description: string; // String!
+    description?: string | null; // String
     id: number; // Int!
     name: string; // String!
   }
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
+  BusinessAccountCreateManyWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountCreateManyWithoutVenueAdministrationInput'];
+  BusinessAccountCreateOneWithoutUserInput: NexusGenInputs['BusinessAccountCreateOneWithoutUserInput'];
+  BusinessAccountCreateOneWithoutVenueInput: NexusGenInputs['BusinessAccountCreateOneWithoutVenueInput'];
+  BusinessAccountCreateOrConnectWithoutUserInput: NexusGenInputs['BusinessAccountCreateOrConnectWithoutUserInput'];
+  BusinessAccountCreateOrConnectWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountCreateOrConnectWithoutVenueAdministrationInput'];
+  BusinessAccountCreateOrConnectWithoutVenueInput: NexusGenInputs['BusinessAccountCreateOrConnectWithoutVenueInput'];
+  BusinessAccountCreateWithoutUserInput: NexusGenInputs['BusinessAccountCreateWithoutUserInput'];
+  BusinessAccountCreateWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountCreateWithoutVenueAdministrationInput'];
+  BusinessAccountCreateWithoutVenueInput: NexusGenInputs['BusinessAccountCreateWithoutVenueInput'];
+  BusinessAccountListRelationFilter: NexusGenInputs['BusinessAccountListRelationFilter'];
+  BusinessAccountScalarWhereInput: NexusGenInputs['BusinessAccountScalarWhereInput'];
+  BusinessAccountUpdateManyMutationInput: NexusGenInputs['BusinessAccountUpdateManyMutationInput'];
+  BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput'];
+  BusinessAccountUpdateManyWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountUpdateManyWithoutVenueAdministrationInput'];
+  BusinessAccountUpdateOneWithoutUserInput: NexusGenInputs['BusinessAccountUpdateOneWithoutUserInput'];
+  BusinessAccountUpdateOneWithoutVenueInput: NexusGenInputs['BusinessAccountUpdateOneWithoutVenueInput'];
+  BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput'];
+  BusinessAccountUpdateWithoutUserInput: NexusGenInputs['BusinessAccountUpdateWithoutUserInput'];
+  BusinessAccountUpdateWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountUpdateWithoutVenueAdministrationInput'];
+  BusinessAccountUpdateWithoutVenueInput: NexusGenInputs['BusinessAccountUpdateWithoutVenueInput'];
+  BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput: NexusGenInputs['BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput'];
+  BusinessAccountUpsertWithoutUserInput: NexusGenInputs['BusinessAccountUpsertWithoutUserInput'];
+  BusinessAccountUpsertWithoutVenueInput: NexusGenInputs['BusinessAccountUpsertWithoutVenueInput'];
+  BusinessAccountWhereInput: NexusGenInputs['BusinessAccountWhereInput'];
+  BusinessAccountWhereUniqueInput: NexusGenInputs['BusinessAccountWhereUniqueInput'];
   DateTimeFieldUpdateOperationsInput: NexusGenInputs['DateTimeFieldUpdateOperationsInput'];
   DateTimeFilter: NexusGenInputs['DateTimeFilter'];
   EmojimoodCreateInput: NexusGenInputs['EmojimoodCreateInput'];
   EmojimoodCreateOneWithoutProfileInput: NexusGenInputs['EmojimoodCreateOneWithoutProfileInput'];
+  EmojimoodCreateOrConnectWithoutProfileInput: NexusGenInputs['EmojimoodCreateOrConnectWithoutProfileInput'];
   EmojimoodCreateWithoutProfileInput: NexusGenInputs['EmojimoodCreateWithoutProfileInput'];
+  EmojimoodUpdateInput: NexusGenInputs['EmojimoodUpdateInput'];
   EmojimoodUpdateOneWithoutProfileInput: NexusGenInputs['EmojimoodUpdateOneWithoutProfileInput'];
-  EmojimoodUpdateWithoutProfileDataInput: NexusGenInputs['EmojimoodUpdateWithoutProfileDataInput'];
+  EmojimoodUpdateWithoutProfileInput: NexusGenInputs['EmojimoodUpdateWithoutProfileInput'];
   EmojimoodUpsertWithoutProfileInput: NexusGenInputs['EmojimoodUpsertWithoutProfileInput'];
   EmojimoodWhereInput: NexusGenInputs['EmojimoodWhereInput'];
   EmojimoodWhereUniqueInput: NexusGenInputs['EmojimoodWhereUniqueInput'];
-  IntFieldUpdateOperationsInput: NexusGenInputs['IntFieldUpdateOperationsInput'];
   IntFilter: NexusGenInputs['IntFilter'];
   IntNullableFilter: NexusGenInputs['IntNullableFilter'];
   NestedDateTimeFilter: NexusGenInputs['NestedDateTimeFilter'];
@@ -653,11 +899,21 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
   NullableStringFieldUpdateOperationsInput: NexusGenInputs['NullableStringFieldUpdateOperationsInput'];
   ProfileCreateManyWithoutEmojimoodInput: NexusGenInputs['ProfileCreateManyWithoutEmojimoodInput'];
   ProfileCreateOneWithoutUserInput: NexusGenInputs['ProfileCreateOneWithoutUserInput'];
+  ProfileCreateOrConnectWithoutEmojimoodInput: NexusGenInputs['ProfileCreateOrConnectWithoutEmojimoodInput'];
+  ProfileCreateOrConnectWithoutUserInput: NexusGenInputs['ProfileCreateOrConnectWithoutUserInput'];
   ProfileCreateWithoutEmojimoodInput: NexusGenInputs['ProfileCreateWithoutEmojimoodInput'];
   ProfileCreateWithoutUserInput: NexusGenInputs['ProfileCreateWithoutUserInput'];
   ProfileListRelationFilter: NexusGenInputs['ProfileListRelationFilter'];
+  ProfileScalarWhereInput: NexusGenInputs['ProfileScalarWhereInput'];
+  ProfileUpdateInput: NexusGenInputs['ProfileUpdateInput'];
+  ProfileUpdateManyMutationInput: NexusGenInputs['ProfileUpdateManyMutationInput'];
+  ProfileUpdateManyWithWhereWithoutEmojimoodInput: NexusGenInputs['ProfileUpdateManyWithWhereWithoutEmojimoodInput'];
+  ProfileUpdateManyWithoutEmojimoodInput: NexusGenInputs['ProfileUpdateManyWithoutEmojimoodInput'];
   ProfileUpdateOneWithoutUserInput: NexusGenInputs['ProfileUpdateOneWithoutUserInput'];
-  ProfileUpdateWithoutUserDataInput: NexusGenInputs['ProfileUpdateWithoutUserDataInput'];
+  ProfileUpdateWithWhereUniqueWithoutEmojimoodInput: NexusGenInputs['ProfileUpdateWithWhereUniqueWithoutEmojimoodInput'];
+  ProfileUpdateWithoutEmojimoodInput: NexusGenInputs['ProfileUpdateWithoutEmojimoodInput'];
+  ProfileUpdateWithoutUserInput: NexusGenInputs['ProfileUpdateWithoutUserInput'];
+  ProfileUpsertWithWhereUniqueWithoutEmojimoodInput: NexusGenInputs['ProfileUpsertWithWhereUniqueWithoutEmojimoodInput'];
   ProfileUpsertWithoutUserInput: NexusGenInputs['ProfileUpsertWithoutUserInput'];
   ProfileWhereInput: NexusGenInputs['ProfileWhereInput'];
   ProfileWhereUniqueInput: NexusGenInputs['ProfileWhereUniqueInput'];
@@ -665,64 +921,66 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
   StringFilter: NexusGenInputs['StringFilter'];
   StringNullableFilter: NexusGenInputs['StringNullableFilter'];
   UserCreateInput: NexusGenInputs['UserCreateInput'];
-  UserCreateManyWithoutVenueAdministrationInput: NexusGenInputs['UserCreateManyWithoutVenueAdministrationInput'];
+  UserCreateOneWithoutBusinessAccountInput: NexusGenInputs['UserCreateOneWithoutBusinessAccountInput'];
   UserCreateOneWithoutProfileInput: NexusGenInputs['UserCreateOneWithoutProfileInput'];
-  UserCreateOneWithoutVenuesInput: NexusGenInputs['UserCreateOneWithoutVenuesInput'];
+  UserCreateOrConnectWithoutBusinessAccountInput: NexusGenInputs['UserCreateOrConnectWithoutBusinessAccountInput'];
+  UserCreateOrConnectWithoutprofileInput: NexusGenInputs['UserCreateOrConnectWithoutprofileInput'];
+  UserCreateWithoutBusinessAccountInput: NexusGenInputs['UserCreateWithoutBusinessAccountInput'];
   UserCreateWithoutProfileInput: NexusGenInputs['UserCreateWithoutProfileInput'];
-  UserCreateWithoutVenueAdministrationInput: NexusGenInputs['UserCreateWithoutVenueAdministrationInput'];
-  UserCreateWithoutVenuesInput: NexusGenInputs['UserCreateWithoutVenuesInput'];
-  UserListRelationFilter: NexusGenInputs['UserListRelationFilter'];
-  UserScalarWhereInput: NexusGenInputs['UserScalarWhereInput'];
   UserUpdateInput: NexusGenInputs['UserUpdateInput'];
-  UserUpdateManyDataInput: NexusGenInputs['UserUpdateManyDataInput'];
-  UserUpdateManyWithWhereNestedInput: NexusGenInputs['UserUpdateManyWithWhereNestedInput'];
-  UserUpdateManyWithoutVenueAdministrationInput: NexusGenInputs['UserUpdateManyWithoutVenueAdministrationInput'];
-  UserUpdateOneRequiredWithoutVenuesInput: NexusGenInputs['UserUpdateOneRequiredWithoutVenuesInput'];
-  UserUpdateWithWhereUniqueWithoutVenueAdministrationInput: NexusGenInputs['UserUpdateWithWhereUniqueWithoutVenueAdministrationInput'];
-  UserUpdateWithoutVenueAdministrationDataInput: NexusGenInputs['UserUpdateWithoutVenueAdministrationDataInput'];
-  UserUpdateWithoutVenuesDataInput: NexusGenInputs['UserUpdateWithoutVenuesDataInput'];
-  UserUpsertWithWhereUniqueWithoutVenueAdministrationInput: NexusGenInputs['UserUpsertWithWhereUniqueWithoutVenueAdministrationInput'];
-  UserUpsertWithoutVenuesInput: NexusGenInputs['UserUpsertWithoutVenuesInput'];
+  UserUpdateOneWithoutBusinessAccountInput: NexusGenInputs['UserUpdateOneWithoutBusinessAccountInput'];
+  UserUpdateOneWithoutProfileInput: NexusGenInputs['UserUpdateOneWithoutProfileInput'];
+  UserUpdateWithoutBusinessAccountInput: NexusGenInputs['UserUpdateWithoutBusinessAccountInput'];
+  UserUpdateWithoutProfileInput: NexusGenInputs['UserUpdateWithoutProfileInput'];
+  UserUpsertWithoutBusinessAccountInput: NexusGenInputs['UserUpsertWithoutBusinessAccountInput'];
+  UserUpsertWithoutProfileInput: NexusGenInputs['UserUpsertWithoutProfileInput'];
   UserWhereInput: NexusGenInputs['UserWhereInput'];
   UserWhereUniqueInput: NexusGenInputs['UserWhereUniqueInput'];
-  VenueAdministrationCreateManyWithoutAdminsInput: NexusGenInputs['VenueAdministrationCreateManyWithoutAdminsInput'];
+  VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput'];
   VenueAdministrationCreateOneWithoutVenueInput: NexusGenInputs['VenueAdministrationCreateOneWithoutVenueInput'];
-  VenueAdministrationCreateWithoutAdminsInput: NexusGenInputs['VenueAdministrationCreateWithoutAdminsInput'];
+  VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput'];
+  VenueAdministrationCreateOrConnectWithoutVenueInput: NexusGenInputs['VenueAdministrationCreateOrConnectWithoutVenueInput'];
+  VenueAdministrationCreateWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationCreateWithoutAdminsBusinessAccountInput'];
   VenueAdministrationCreateWithoutVenueInput: NexusGenInputs['VenueAdministrationCreateWithoutVenueInput'];
   VenueAdministrationListRelationFilter: NexusGenInputs['VenueAdministrationListRelationFilter'];
   VenueAdministrationScalarWhereInput: NexusGenInputs['VenueAdministrationScalarWhereInput'];
-  VenueAdministrationUpdateManyDataInput: NexusGenInputs['VenueAdministrationUpdateManyDataInput'];
-  VenueAdministrationUpdateManyWithWhereNestedInput: NexusGenInputs['VenueAdministrationUpdateManyWithWhereNestedInput'];
-  VenueAdministrationUpdateManyWithoutAdminsInput: NexusGenInputs['VenueAdministrationUpdateManyWithoutAdminsInput'];
+  VenueAdministrationUpdateManyMutationInput: NexusGenInputs['VenueAdministrationUpdateManyMutationInput'];
+  VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput'];
+  VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput'];
   VenueAdministrationUpdateOneRequiredWithoutVenueInput: NexusGenInputs['VenueAdministrationUpdateOneRequiredWithoutVenueInput'];
-  VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput: NexusGenInputs['VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput'];
-  VenueAdministrationUpdateWithoutAdminsDataInput: NexusGenInputs['VenueAdministrationUpdateWithoutAdminsDataInput'];
-  VenueAdministrationUpdateWithoutVenueDataInput: NexusGenInputs['VenueAdministrationUpdateWithoutVenueDataInput'];
-  VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput: NexusGenInputs['VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput'];
+  VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput'];
+  VenueAdministrationUpdateWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationUpdateWithoutAdminsBusinessAccountInput'];
+  VenueAdministrationUpdateWithoutVenueInput: NexusGenInputs['VenueAdministrationUpdateWithoutVenueInput'];
+  VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput: NexusGenInputs['VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput'];
   VenueAdministrationUpsertWithoutVenueInput: NexusGenInputs['VenueAdministrationUpsertWithoutVenueInput'];
   VenueAdministrationWhereInput: NexusGenInputs['VenueAdministrationWhereInput'];
   VenueAdministrationWhereUniqueInput: NexusGenInputs['VenueAdministrationWhereUniqueInput'];
-  VenueCreateManyWithoutUserInput: NexusGenInputs['VenueCreateManyWithoutUserInput'];
+  VenueCreateInput: NexusGenInputs['VenueCreateInput'];
+  VenueCreateManyWithoutBusinessAccountInput: NexusGenInputs['VenueCreateManyWithoutBusinessAccountInput'];
   VenueCreateOneWithoutVenueAdministrationInput: NexusGenInputs['VenueCreateOneWithoutVenueAdministrationInput'];
-  VenueCreateWithoutUserInput: NexusGenInputs['VenueCreateWithoutUserInput'];
+  VenueCreateOrConnectWithoutVenueAdministrationInput: NexusGenInputs['VenueCreateOrConnectWithoutVenueAdministrationInput'];
+  VenueCreateOrConnectWithoutbusinessAccountInput: NexusGenInputs['VenueCreateOrConnectWithoutbusinessAccountInput'];
+  VenueCreateWithoutBusinessAccountInput: NexusGenInputs['VenueCreateWithoutBusinessAccountInput'];
   VenueCreateWithoutVenueAdministrationInput: NexusGenInputs['VenueCreateWithoutVenueAdministrationInput'];
   VenueDetailsCreateOneWithoutVenueInput: NexusGenInputs['VenueDetailsCreateOneWithoutVenueInput'];
+  VenueDetailsCreateOrConnectWithoutVenueInput: NexusGenInputs['VenueDetailsCreateOrConnectWithoutVenueInput'];
   VenueDetailsCreateWithoutVenueInput: NexusGenInputs['VenueDetailsCreateWithoutVenueInput'];
   VenueDetailsUpdateOneRequiredWithoutVenueInput: NexusGenInputs['VenueDetailsUpdateOneRequiredWithoutVenueInput'];
-  VenueDetailsUpdateWithoutVenueDataInput: NexusGenInputs['VenueDetailsUpdateWithoutVenueDataInput'];
+  VenueDetailsUpdateWithoutVenueInput: NexusGenInputs['VenueDetailsUpdateWithoutVenueInput'];
   VenueDetailsUpsertWithoutVenueInput: NexusGenInputs['VenueDetailsUpsertWithoutVenueInput'];
   VenueDetailsWhereInput: NexusGenInputs['VenueDetailsWhereInput'];
   VenueDetailsWhereUniqueInput: NexusGenInputs['VenueDetailsWhereUniqueInput'];
   VenueListRelationFilter: NexusGenInputs['VenueListRelationFilter'];
   VenueScalarWhereInput: NexusGenInputs['VenueScalarWhereInput'];
-  VenueUpdateManyDataInput: NexusGenInputs['VenueUpdateManyDataInput'];
-  VenueUpdateManyWithWhereNestedInput: NexusGenInputs['VenueUpdateManyWithWhereNestedInput'];
-  VenueUpdateManyWithoutUserInput: NexusGenInputs['VenueUpdateManyWithoutUserInput'];
+  VenueUpdateInput: NexusGenInputs['VenueUpdateInput'];
+  VenueUpdateManyMutationInput: NexusGenInputs['VenueUpdateManyMutationInput'];
+  VenueUpdateManyWithWhereWithoutBusinessAccountInput: NexusGenInputs['VenueUpdateManyWithWhereWithoutBusinessAccountInput'];
+  VenueUpdateManyWithoutBusinessAccountInput: NexusGenInputs['VenueUpdateManyWithoutBusinessAccountInput'];
   VenueUpdateOneWithoutVenueAdministrationInput: NexusGenInputs['VenueUpdateOneWithoutVenueAdministrationInput'];
-  VenueUpdateWithWhereUniqueWithoutUserInput: NexusGenInputs['VenueUpdateWithWhereUniqueWithoutUserInput'];
-  VenueUpdateWithoutUserDataInput: NexusGenInputs['VenueUpdateWithoutUserDataInput'];
-  VenueUpdateWithoutVenueAdministrationDataInput: NexusGenInputs['VenueUpdateWithoutVenueAdministrationDataInput'];
-  VenueUpsertWithWhereUniqueWithoutUserInput: NexusGenInputs['VenueUpsertWithWhereUniqueWithoutUserInput'];
+  VenueUpdateWithWhereUniqueWithoutBusinessAccountInput: NexusGenInputs['VenueUpdateWithWhereUniqueWithoutBusinessAccountInput'];
+  VenueUpdateWithoutBusinessAccountInput: NexusGenInputs['VenueUpdateWithoutBusinessAccountInput'];
+  VenueUpdateWithoutVenueAdministrationInput: NexusGenInputs['VenueUpdateWithoutVenueAdministrationInput'];
+  VenueUpsertWithWhereUniqueWithoutBusinessAccountInput: NexusGenInputs['VenueUpsertWithWhereUniqueWithoutBusinessAccountInput'];
   VenueUpsertWithoutVenueAdministrationInput: NexusGenInputs['VenueUpsertWithoutVenueAdministrationInput'];
   VenueWhereInput: NexusGenInputs['VenueWhereInput'];
   VenueWhereUniqueInput: NexusGenInputs['VenueWhereUniqueInput'];
@@ -736,6 +994,10 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
 }
 
 export interface NexusGenFieldTypes {
+  BusinessAccount: { // field return type
+    id: number; // Int!
+    VenueAdministration: NexusGenRootTypes['VenueAdministration'][]; // [VenueAdministration!]!
+  }
   Emojimood: { // field return type
     colorOne: string; // String!
     colorTwo: string; // String!
@@ -744,13 +1006,17 @@ export interface NexusGenFieldTypes {
   }
   Mutation: { // field return type
     createEmojimood: NexusGenRootTypes['Emojimood']; // Emojimood!
+    createOneVenue: NexusGenRootTypes['Venue']; // Venue!
     createUser: NexusGenRootTypes['User']; // User!
-    deleteOneProfile: NexusGenRootTypes['Profile'] | null; // Profile
-    updateUser: NexusGenRootTypes['User'] | null; // User
+    updateOneEmojimood: NexusGenRootTypes['Emojimood'] | null; // Emojimood
+    updateOneProfile: NexusGenRootTypes['Profile'] | null; // Profile
+    updateOneUser: NexusGenRootTypes['User'] | null; // User
+    updateOneVenue: NexusGenRootTypes['Venue'] | null; // Venue
   }
   Profile: { // field return type
     bio: string | null; // String
-    emojimood: NexusGenRootTypes['Emojimood'] | null; // Emojimood
+    Emojimood: NexusGenRootTypes['Emojimood'] | null; // Emojimood
+    emojimoodId: number | null; // Int
     id: number; // Int!
     User: NexusGenRootTypes['User'] | null; // User
   }
@@ -759,27 +1025,42 @@ export interface NexusGenFieldTypes {
     findUser: NexusGenRootTypes['User'] | null; // User
     SearchUsers: NexusGenRootTypes['User'][]; // [User!]!
     users: NexusGenRootTypes['User'][]; // [User!]!
+    venues: NexusGenRootTypes['Venue'][]; // [Venue!]!
   }
   User: { // field return type
+    BusinessAccount: NexusGenRootTypes['Profile'] | null; // Profile
+    createdAt: NexusGenScalars['DateTime']; // DateTime!
     email: string; // String!
     id: number; // Int!
     name: string | null; // String
     profile: NexusGenRootTypes['Profile'] | null; // Profile
-    VenueAdministration: NexusGenRootTypes['Profile'][]; // [Profile!]!
-    venues: NexusGenRootTypes['Venue'][]; // [Venue!]!
   }
   Venue: { // field return type
+    businessAccount: NexusGenRootTypes['BusinessAccount'] | null; // BusinessAccount
     id: number; // Int!
+    VenueAdministration: NexusGenRootTypes['VenueAdministration']; // VenueAdministration!
     VenueDetails: NexusGenRootTypes['VenueDetails']; // VenueDetails!
+    venueDetailsId: number; // Int!
+  }
+  VenueAdministration: { // field return type
+    AdminsBusinessAccount: NexusGenRootTypes['BusinessAccount'][]; // [BusinessAccount!]!
+    id: number; // Int!
+    knalb: string | null; // String
+    Venue: NexusGenRootTypes['Venue'] | null; // Venue
   }
   VenueDetails: { // field return type
-    description: string; // String!
+    description: string | null; // String
     id: number; // Int!
     name: string; // String!
+    Venue: NexusGenRootTypes['Venue'] | null; // Venue
   }
 }
 
 export interface NexusGenFieldTypeNames {
+  BusinessAccount: { // field return type name
+    id: 'Int'
+    VenueAdministration: 'VenueAdministration'
+  }
   Emojimood: { // field return type name
     colorOne: 'String'
     colorTwo: 'String'
@@ -788,13 +1069,17 @@ export interface NexusGenFieldTypeNames {
   }
   Mutation: { // field return type name
     createEmojimood: 'Emojimood'
+    createOneVenue: 'Venue'
     createUser: 'User'
-    deleteOneProfile: 'Profile'
-    updateUser: 'User'
+    updateOneEmojimood: 'Emojimood'
+    updateOneProfile: 'Profile'
+    updateOneUser: 'User'
+    updateOneVenue: 'Venue'
   }
   Profile: { // field return type name
     bio: 'String'
-    emojimood: 'Emojimood'
+    Emojimood: 'Emojimood'
+    emojimoodId: 'Int'
     id: 'Int'
     User: 'User'
   }
@@ -803,27 +1088,46 @@ export interface NexusGenFieldTypeNames {
     findUser: 'User'
     SearchUsers: 'User'
     users: 'User'
+    venues: 'Venue'
   }
   User: { // field return type name
+    BusinessAccount: 'Profile'
+    createdAt: 'DateTime'
     email: 'String'
     id: 'Int'
     name: 'String'
     profile: 'Profile'
-    VenueAdministration: 'Profile'
-    venues: 'Venue'
   }
   Venue: { // field return type name
+    businessAccount: 'BusinessAccount'
     id: 'Int'
+    VenueAdministration: 'VenueAdministration'
     VenueDetails: 'VenueDetails'
+    venueDetailsId: 'Int'
+  }
+  VenueAdministration: { // field return type name
+    AdminsBusinessAccount: 'BusinessAccount'
+    id: 'Int'
+    knalb: 'String'
+    Venue: 'Venue'
   }
   VenueDetails: { // field return type name
     description: 'String'
     id: 'Int'
     name: 'String'
+    Venue: 'Venue'
   }
 }
 
 export interface NexusGenArgTypes {
+  BusinessAccount: {
+    VenueAdministration: { // args
+      after?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
+      before?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
+      first?: number | null; // Int
+      last?: number | null; // Int
+    }
+  }
   Emojimood: {
     Profile: { // args
       after?: NexusGenInputs['ProfileWhereUniqueInput'] | null; // ProfileWhereUniqueInput
@@ -836,15 +1140,27 @@ export interface NexusGenArgTypes {
     createEmojimood: { // args
       data: NexusGenInputs['EmojimoodCreateInput']; // EmojimoodCreateInput!
     }
+    createOneVenue: { // args
+      data: NexusGenInputs['VenueCreateInput']; // VenueCreateInput!
+    }
     createUser: { // args
       data: NexusGenInputs['UserCreateInput']; // UserCreateInput!
     }
-    deleteOneProfile: { // args
+    updateOneEmojimood: { // args
+      data: NexusGenInputs['EmojimoodUpdateInput']; // EmojimoodUpdateInput!
+      where: NexusGenInputs['EmojimoodWhereUniqueInput']; // EmojimoodWhereUniqueInput!
+    }
+    updateOneProfile: { // args
+      data: NexusGenInputs['ProfileUpdateInput']; // ProfileUpdateInput!
       where: NexusGenInputs['ProfileWhereUniqueInput']; // ProfileWhereUniqueInput!
     }
-    updateUser: { // args
+    updateOneUser: { // args
       data: NexusGenInputs['UserUpdateInput']; // UserUpdateInput!
       where: NexusGenInputs['UserWhereUniqueInput']; // UserWhereUniqueInput!
+    }
+    updateOneVenue: { // args
+      data: NexusGenInputs['VenueUpdateInput']; // VenueUpdateInput!
+      where: NexusGenInputs['VenueWhereUniqueInput']; // VenueWhereUniqueInput!
     }
   }
   Query: {
@@ -871,17 +1187,17 @@ export interface NexusGenArgTypes {
       last?: number | null; // Int
       where?: NexusGenInputs['UserWhereInput'] | null; // UserWhereInput
     }
-  }
-  User: {
-    VenueAdministration: { // args
-      after?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
-      before?: NexusGenInputs['VenueAdministrationWhereUniqueInput'] | null; // VenueAdministrationWhereUniqueInput
-      first?: number | null; // Int
-      last?: number | null; // Int
-    }
     venues: { // args
       after?: NexusGenInputs['VenueWhereUniqueInput'] | null; // VenueWhereUniqueInput
       before?: NexusGenInputs['VenueWhereUniqueInput'] | null; // VenueWhereUniqueInput
+      first?: number | null; // Int
+      last?: number | null; // Int
+    }
+  }
+  VenueAdministration: {
+    AdminsBusinessAccount: { // args
+      after?: NexusGenInputs['BusinessAccountWhereUniqueInput'] | null; // BusinessAccountWhereUniqueInput
+      before?: NexusGenInputs['BusinessAccountWhereUniqueInput'] | null; // BusinessAccountWhereUniqueInput
       first?: number | null; // Int
       last?: number | null; // Int
     }
@@ -893,9 +1209,9 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "Emojimood" | "Mutation" | "Profile" | "Query" | "User" | "Venue" | "VenueDetails";
+export type NexusGenObjectNames = "BusinessAccount" | "Emojimood" | "Mutation" | "Profile" | "Query" | "User" | "Venue" | "VenueAdministration" | "VenueDetails";
 
-export type NexusGenInputNames = "DateTimeFieldUpdateOperationsInput" | "DateTimeFilter" | "EmojimoodCreateInput" | "EmojimoodCreateOneWithoutProfileInput" | "EmojimoodCreateWithoutProfileInput" | "EmojimoodUpdateOneWithoutProfileInput" | "EmojimoodUpdateWithoutProfileDataInput" | "EmojimoodUpsertWithoutProfileInput" | "EmojimoodWhereInput" | "EmojimoodWhereUniqueInput" | "IntFieldUpdateOperationsInput" | "IntFilter" | "IntNullableFilter" | "NestedDateTimeFilter" | "NestedIntFilter" | "NestedIntNullableFilter" | "NestedStringFilter" | "NestedStringNullableFilter" | "NullableStringFieldUpdateOperationsInput" | "ProfileCreateManyWithoutEmojimoodInput" | "ProfileCreateOneWithoutUserInput" | "ProfileCreateWithoutEmojimoodInput" | "ProfileCreateWithoutUserInput" | "ProfileListRelationFilter" | "ProfileUpdateOneWithoutUserInput" | "ProfileUpdateWithoutUserDataInput" | "ProfileUpsertWithoutUserInput" | "ProfileWhereInput" | "ProfileWhereUniqueInput" | "StringFieldUpdateOperationsInput" | "StringFilter" | "StringNullableFilter" | "UserCreateInput" | "UserCreateManyWithoutVenueAdministrationInput" | "UserCreateOneWithoutProfileInput" | "UserCreateOneWithoutVenuesInput" | "UserCreateWithoutProfileInput" | "UserCreateWithoutVenueAdministrationInput" | "UserCreateWithoutVenuesInput" | "UserListRelationFilter" | "UserScalarWhereInput" | "UserUpdateInput" | "UserUpdateManyDataInput" | "UserUpdateManyWithWhereNestedInput" | "UserUpdateManyWithoutVenueAdministrationInput" | "UserUpdateOneRequiredWithoutVenuesInput" | "UserUpdateWithWhereUniqueWithoutVenueAdministrationInput" | "UserUpdateWithoutVenueAdministrationDataInput" | "UserUpdateWithoutVenuesDataInput" | "UserUpsertWithWhereUniqueWithoutVenueAdministrationInput" | "UserUpsertWithoutVenuesInput" | "UserWhereInput" | "UserWhereUniqueInput" | "VenueAdministrationCreateManyWithoutAdminsInput" | "VenueAdministrationCreateOneWithoutVenueInput" | "VenueAdministrationCreateWithoutAdminsInput" | "VenueAdministrationCreateWithoutVenueInput" | "VenueAdministrationListRelationFilter" | "VenueAdministrationScalarWhereInput" | "VenueAdministrationUpdateManyDataInput" | "VenueAdministrationUpdateManyWithWhereNestedInput" | "VenueAdministrationUpdateManyWithoutAdminsInput" | "VenueAdministrationUpdateOneRequiredWithoutVenueInput" | "VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput" | "VenueAdministrationUpdateWithoutAdminsDataInput" | "VenueAdministrationUpdateWithoutVenueDataInput" | "VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput" | "VenueAdministrationUpsertWithoutVenueInput" | "VenueAdministrationWhereInput" | "VenueAdministrationWhereUniqueInput" | "VenueCreateManyWithoutUserInput" | "VenueCreateOneWithoutVenueAdministrationInput" | "VenueCreateWithoutUserInput" | "VenueCreateWithoutVenueAdministrationInput" | "VenueDetailsCreateOneWithoutVenueInput" | "VenueDetailsCreateWithoutVenueInput" | "VenueDetailsUpdateOneRequiredWithoutVenueInput" | "VenueDetailsUpdateWithoutVenueDataInput" | "VenueDetailsUpsertWithoutVenueInput" | "VenueDetailsWhereInput" | "VenueDetailsWhereUniqueInput" | "VenueListRelationFilter" | "VenueScalarWhereInput" | "VenueUpdateManyDataInput" | "VenueUpdateManyWithWhereNestedInput" | "VenueUpdateManyWithoutUserInput" | "VenueUpdateOneWithoutVenueAdministrationInput" | "VenueUpdateWithWhereUniqueWithoutUserInput" | "VenueUpdateWithoutUserDataInput" | "VenueUpdateWithoutVenueAdministrationDataInput" | "VenueUpsertWithWhereUniqueWithoutUserInput" | "VenueUpsertWithoutVenueAdministrationInput" | "VenueWhereInput" | "VenueWhereUniqueInput";
+export type NexusGenInputNames = "BusinessAccountCreateManyWithoutVenueAdministrationInput" | "BusinessAccountCreateOneWithoutUserInput" | "BusinessAccountCreateOneWithoutVenueInput" | "BusinessAccountCreateOrConnectWithoutUserInput" | "BusinessAccountCreateOrConnectWithoutVenueAdministrationInput" | "BusinessAccountCreateOrConnectWithoutVenueInput" | "BusinessAccountCreateWithoutUserInput" | "BusinessAccountCreateWithoutVenueAdministrationInput" | "BusinessAccountCreateWithoutVenueInput" | "BusinessAccountListRelationFilter" | "BusinessAccountScalarWhereInput" | "BusinessAccountUpdateManyMutationInput" | "BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput" | "BusinessAccountUpdateManyWithoutVenueAdministrationInput" | "BusinessAccountUpdateOneWithoutUserInput" | "BusinessAccountUpdateOneWithoutVenueInput" | "BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput" | "BusinessAccountUpdateWithoutUserInput" | "BusinessAccountUpdateWithoutVenueAdministrationInput" | "BusinessAccountUpdateWithoutVenueInput" | "BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput" | "BusinessAccountUpsertWithoutUserInput" | "BusinessAccountUpsertWithoutVenueInput" | "BusinessAccountWhereInput" | "BusinessAccountWhereUniqueInput" | "DateTimeFieldUpdateOperationsInput" | "DateTimeFilter" | "EmojimoodCreateInput" | "EmojimoodCreateOneWithoutProfileInput" | "EmojimoodCreateOrConnectWithoutProfileInput" | "EmojimoodCreateWithoutProfileInput" | "EmojimoodUpdateInput" | "EmojimoodUpdateOneWithoutProfileInput" | "EmojimoodUpdateWithoutProfileInput" | "EmojimoodUpsertWithoutProfileInput" | "EmojimoodWhereInput" | "EmojimoodWhereUniqueInput" | "IntFilter" | "IntNullableFilter" | "NestedDateTimeFilter" | "NestedIntFilter" | "NestedIntNullableFilter" | "NestedStringFilter" | "NestedStringNullableFilter" | "NullableStringFieldUpdateOperationsInput" | "ProfileCreateManyWithoutEmojimoodInput" | "ProfileCreateOneWithoutUserInput" | "ProfileCreateOrConnectWithoutEmojimoodInput" | "ProfileCreateOrConnectWithoutUserInput" | "ProfileCreateWithoutEmojimoodInput" | "ProfileCreateWithoutUserInput" | "ProfileListRelationFilter" | "ProfileScalarWhereInput" | "ProfileUpdateInput" | "ProfileUpdateManyMutationInput" | "ProfileUpdateManyWithWhereWithoutEmojimoodInput" | "ProfileUpdateManyWithoutEmojimoodInput" | "ProfileUpdateOneWithoutUserInput" | "ProfileUpdateWithWhereUniqueWithoutEmojimoodInput" | "ProfileUpdateWithoutEmojimoodInput" | "ProfileUpdateWithoutUserInput" | "ProfileUpsertWithWhereUniqueWithoutEmojimoodInput" | "ProfileUpsertWithoutUserInput" | "ProfileWhereInput" | "ProfileWhereUniqueInput" | "StringFieldUpdateOperationsInput" | "StringFilter" | "StringNullableFilter" | "UserCreateInput" | "UserCreateOneWithoutBusinessAccountInput" | "UserCreateOneWithoutProfileInput" | "UserCreateOrConnectWithoutBusinessAccountInput" | "UserCreateOrConnectWithoutprofileInput" | "UserCreateWithoutBusinessAccountInput" | "UserCreateWithoutProfileInput" | "UserUpdateInput" | "UserUpdateOneWithoutBusinessAccountInput" | "UserUpdateOneWithoutProfileInput" | "UserUpdateWithoutBusinessAccountInput" | "UserUpdateWithoutProfileInput" | "UserUpsertWithoutBusinessAccountInput" | "UserUpsertWithoutProfileInput" | "UserWhereInput" | "UserWhereUniqueInput" | "VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput" | "VenueAdministrationCreateOneWithoutVenueInput" | "VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput" | "VenueAdministrationCreateOrConnectWithoutVenueInput" | "VenueAdministrationCreateWithoutAdminsBusinessAccountInput" | "VenueAdministrationCreateWithoutVenueInput" | "VenueAdministrationListRelationFilter" | "VenueAdministrationScalarWhereInput" | "VenueAdministrationUpdateManyMutationInput" | "VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput" | "VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput" | "VenueAdministrationUpdateOneRequiredWithoutVenueInput" | "VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput" | "VenueAdministrationUpdateWithoutAdminsBusinessAccountInput" | "VenueAdministrationUpdateWithoutVenueInput" | "VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput" | "VenueAdministrationUpsertWithoutVenueInput" | "VenueAdministrationWhereInput" | "VenueAdministrationWhereUniqueInput" | "VenueCreateInput" | "VenueCreateManyWithoutBusinessAccountInput" | "VenueCreateOneWithoutVenueAdministrationInput" | "VenueCreateOrConnectWithoutVenueAdministrationInput" | "VenueCreateOrConnectWithoutbusinessAccountInput" | "VenueCreateWithoutBusinessAccountInput" | "VenueCreateWithoutVenueAdministrationInput" | "VenueDetailsCreateOneWithoutVenueInput" | "VenueDetailsCreateOrConnectWithoutVenueInput" | "VenueDetailsCreateWithoutVenueInput" | "VenueDetailsUpdateOneRequiredWithoutVenueInput" | "VenueDetailsUpdateWithoutVenueInput" | "VenueDetailsUpsertWithoutVenueInput" | "VenueDetailsWhereInput" | "VenueDetailsWhereUniqueInput" | "VenueListRelationFilter" | "VenueScalarWhereInput" | "VenueUpdateInput" | "VenueUpdateManyMutationInput" | "VenueUpdateManyWithWhereWithoutBusinessAccountInput" | "VenueUpdateManyWithoutBusinessAccountInput" | "VenueUpdateOneWithoutVenueAdministrationInput" | "VenueUpdateWithWhereUniqueWithoutBusinessAccountInput" | "VenueUpdateWithoutBusinessAccountInput" | "VenueUpdateWithoutVenueAdministrationInput" | "VenueUpsertWithWhereUniqueWithoutBusinessAccountInput" | "VenueUpsertWithoutVenueAdministrationInput" | "VenueWhereInput" | "VenueWhereUniqueInput";
 
 export type NexusGenEnumNames = "QueryMode";
 

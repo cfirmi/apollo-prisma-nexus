@@ -1,0 +1,15 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteField",
+      "model": "VenueAdministration",
+      "field": "AdminsBusinessAccount"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "BusinessAccount",
+      "field": "VenueAdministration"
+    }
+  ]
+}

@@ -105,16 +105,9 @@
     {
       "tag": "CreateField",
       "model": "User",
-      "field": "venues",
-      "type": "Venue",
-      "arity": "List"
-    },
-    {
-      "tag": "CreateField",
-      "model": "User",
-      "field": "VenueAdministration",
-      "type": "VenueAdministration",
-      "arity": "List"
+      "field": "businessAccount",
+      "type": "BusinessAccount",
+      "arity": "Optional"
     },
     {
       "tag": "CreateDirective",
@@ -122,7 +115,7 @@
         "path": {
           "tag": "Field",
           "model": "User",
-          "field": "VenueAdministration"
+          "field": "businessAccount"
         },
         "directive": "relation"
       }
@@ -134,12 +127,26 @@
         "path": {
           "tag": "Field",
           "model": "User",
-          "field": "VenueAdministration"
+          "field": "businessAccount"
         },
         "directive": "relation"
       },
-      "argument": "",
-      "value": "\"UserToVenueAdministrationManyToMany\""
+      "argument": "fields",
+      "value": "[businessAccountId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "businessAccount"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
     },
     {
       "tag": "CreateField",
@@ -172,6 +179,13 @@
       },
       "argument": "",
       "value": "now()"
+    },
+    {
+      "tag": "CreateField",
+      "model": "User",
+      "field": "businessAccountId",
+      "type": "Int",
+      "arity": "Optional"
     },
     {
       "tag": "CreateModel",
@@ -283,24 +297,6 @@
     {
       "tag": "CreateField",
       "model": "Profile",
-      "field": "user",
-      "type": "Int",
-      "arity": "Required"
-    },
-    {
-      "tag": "CreateDirective",
-      "location": {
-        "path": {
-          "tag": "Field",
-          "model": "Profile",
-          "field": "user"
-        },
-        "directive": "unique"
-      }
-    },
-    {
-      "tag": "CreateField",
-      "model": "Profile",
       "field": "userId",
       "type": "Int",
       "arity": "Optional"
@@ -319,7 +315,7 @@
     {
       "tag": "CreateField",
       "model": "Profile",
-      "field": "User",
+      "field": "user",
       "type": "User",
       "arity": "Optional"
     },
@@ -329,7 +325,7 @@
         "path": {
           "tag": "Field",
           "model": "Profile",
-          "field": "User"
+          "field": "user"
         },
         "directive": "relation"
       }
@@ -341,7 +337,7 @@
         "path": {
           "tag": "Field",
           "model": "Profile",
-          "field": "User"
+          "field": "user"
         },
         "directive": "relation"
       },
@@ -355,7 +351,7 @@
         "path": {
           "tag": "Field",
           "model": "Profile",
-          "field": "User"
+          "field": "user"
         },
         "directive": "relation"
       },
@@ -422,6 +418,13 @@
       "field": "colorTwo",
       "type": "String",
       "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emojimood",
+      "field": "Profile",
+      "type": "Profile",
+      "arity": "List"
     },
     {
       "tag": "CreateModel",
@@ -491,13 +494,6 @@
     {
       "tag": "CreateField",
       "model": "Venue",
-      "field": "userId",
-      "type": "Int",
-      "arity": "Required"
-    },
-    {
-      "tag": "CreateField",
-      "model": "Venue",
       "field": "venueAdministrationId",
       "type": "Int",
       "arity": "Required"
@@ -516,53 +512,7 @@
     {
       "tag": "CreateField",
       "model": "Venue",
-      "field": "User",
-      "type": "User",
-      "arity": "Required"
-    },
-    {
-      "tag": "CreateDirective",
-      "location": {
-        "path": {
-          "tag": "Field",
-          "model": "Venue",
-          "field": "User"
-        },
-        "directive": "relation"
-      }
-    },
-    {
-      "tag": "CreateArgument",
-      "location": {
-        "tag": "Directive",
-        "path": {
-          "tag": "Field",
-          "model": "Venue",
-          "field": "User"
-        },
-        "directive": "relation"
-      },
-      "argument": "fields",
-      "value": "[userId]"
-    },
-    {
-      "tag": "CreateArgument",
-      "location": {
-        "tag": "Directive",
-        "path": {
-          "tag": "Field",
-          "model": "Venue",
-          "field": "User"
-        },
-        "directive": "relation"
-      },
-      "argument": "references",
-      "value": "[id]"
-    },
-    {
-      "tag": "CreateField",
-      "model": "Venue",
-      "field": "VenueAdministration",
+      "field": "venueAdministration",
       "type": "VenueAdministration",
       "arity": "Required"
     },
@@ -572,7 +522,7 @@
         "path": {
           "tag": "Field",
           "model": "Venue",
-          "field": "VenueAdministration"
+          "field": "venueAdministration"
         },
         "directive": "relation"
       }
@@ -584,7 +534,7 @@
         "path": {
           "tag": "Field",
           "model": "Venue",
-          "field": "VenueAdministration"
+          "field": "venueAdministration"
         },
         "directive": "relation"
       },
@@ -598,7 +548,7 @@
         "path": {
           "tag": "Field",
           "model": "Venue",
-          "field": "VenueAdministration"
+          "field": "venueAdministration"
         },
         "directive": "relation"
       },
@@ -608,7 +558,7 @@
     {
       "tag": "CreateField",
       "model": "Venue",
-      "field": "VenueDetails",
+      "field": "venueDetails",
       "type": "VenueDetails",
       "arity": "Required"
     },
@@ -618,7 +568,7 @@
         "path": {
           "tag": "Field",
           "model": "Venue",
-          "field": "VenueDetails"
+          "field": "venueDetails"
         },
         "directive": "relation"
       }
@@ -630,7 +580,7 @@
         "path": {
           "tag": "Field",
           "model": "Venue",
-          "field": "VenueDetails"
+          "field": "venueDetails"
         },
         "directive": "relation"
       },
@@ -644,7 +594,7 @@
         "path": {
           "tag": "Field",
           "model": "Venue",
-          "field": "VenueDetails"
+          "field": "venueDetails"
         },
         "directive": "relation"
       },
@@ -682,6 +632,59 @@
       },
       "argument": "",
       "value": "now()"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Venue",
+      "field": "businessAccount",
+      "type": "BusinessAccount",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "businessAccount"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "businessAccount"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[businessAccountId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "businessAccount"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Venue",
+      "field": "businessAccountId",
+      "type": "Int",
+      "arity": "Optional"
     },
     {
       "tag": "CreateModel",
@@ -747,7 +750,7 @@
     {
       "tag": "CreateField",
       "model": "VenueDetails",
-      "field": "Venue",
+      "field": "venue",
       "type": "Venue",
       "arity": "Optional"
     },
@@ -809,7 +812,7 @@
       "tag": "CreateField",
       "model": "VenueAdministration",
       "field": "admins",
-      "type": "User",
+      "type": "BusinessAccount",
       "arity": "List"
     },
     {
@@ -835,7 +838,132 @@
         "directive": "relation"
       },
       "argument": "",
-      "value": "\"UserToVenueAdministrationManyToMany\""
+      "value": "\"VenueAdministrationToBusinessAccoutManyToMany\""
+    },
+    {
+      "tag": "CreateModel",
+      "model": "BusinessAccount"
+    },
+    {
+      "tag": "CreateField",
+      "model": "BusinessAccount",
+      "field": "id",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "id"
+        },
+        "directive": "id"
+      }
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "id"
+        },
+        "directive": "default"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "id"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "value": "autoincrement()"
+    },
+    {
+      "tag": "CreateField",
+      "model": "BusinessAccount",
+      "field": "VenueAdministration",
+      "type": "VenueAdministration",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "VenueAdministration"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "VenueAdministration"
+        },
+        "directive": "relation"
+      },
+      "argument": "",
+      "value": "\"VenueAdministrationToBusinessAccoutManyToMany\""
+    },
+    {
+      "tag": "CreateField",
+      "model": "BusinessAccount",
+      "field": "User",
+      "type": "User",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "BusinessAccount",
+      "field": "Venue",
+      "type": "Venue",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateField",
+      "model": "BusinessAccount",
+      "field": "createdAt",
+      "type": "DateTime",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "createdAt"
+        },
+        "directive": "default"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "BusinessAccount",
+          "field": "createdAt"
+        },
+        "directive": "default"
+      },
+      "argument": "",
+      "value": "now()"
     }
   ]
 }

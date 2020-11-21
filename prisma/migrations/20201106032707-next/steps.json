@@ -1,0 +1,34 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "businessAccountId"
+        },
+        "directive": "unique"
+      }
+    },
+    {
+      "tag": "CreateField",
+      "model": "VenueAdministration",
+      "field": "Venue",
+      "type": "Venue",
+      "arity": "Required"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "VenueAdministration",
+      "field": "venue"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "BusinessAccount",
+      "field": "User",
+      "arity": "Optional"
+    }
+  ]
+}

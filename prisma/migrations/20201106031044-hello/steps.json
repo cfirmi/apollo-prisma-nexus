@@ -1,0 +1,309 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "User",
+      "field": "BusinessAccount",
+      "type": "BusinessAccount",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "BusinessAccount"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "BusinessAccount"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[businessAccountId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "BusinessAccount"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "User",
+      "field": "businessAccount"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Profile",
+      "field": "Emojimood",
+      "type": "Emojimood",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Profile",
+          "field": "Emojimood"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Profile",
+          "field": "Emojimood"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[emojimoodId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Profile",
+          "field": "Emojimood"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Profile",
+      "field": "User",
+      "type": "User",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Profile",
+          "field": "User"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Profile",
+          "field": "User"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[userId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Profile",
+          "field": "User"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Profile",
+      "field": "emojimood"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Profile",
+      "field": "user"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Venue",
+      "field": "VenueAdministration",
+      "type": "VenueAdministration",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "VenueAdministration"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "VenueAdministration"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[venueAdministrationId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "VenueAdministration"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Venue",
+      "field": "VenueDetails",
+      "type": "VenueDetails",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "VenueDetails"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "VenueDetails"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[venueDetailsId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Venue",
+          "field": "VenueDetails"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Venue",
+      "field": "venueAdministration"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Venue",
+      "field": "venueDetails"
+    },
+    {
+      "tag": "CreateField",
+      "model": "VenueDetails",
+      "field": "Venue",
+      "type": "Venue",
+      "arity": "Optional"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "VenueDetails",
+      "field": "venue"
+    },
+    {
+      "tag": "CreateField",
+      "model": "VenueAdministration",
+      "field": "BusinessAccount",
+      "type": "BusinessAccount",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "VenueAdministration",
+          "field": "BusinessAccount"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "VenueAdministration",
+          "field": "BusinessAccount"
+        },
+        "directive": "relation"
+      },
+      "argument": "",
+      "value": "\"VenueAdministrationToBusinessAccoutManyToMany\""
+    },
+    {
+      "tag": "DeleteField",
+      "model": "VenueAdministration",
+      "field": "admins"
+    }
+  ]
+}

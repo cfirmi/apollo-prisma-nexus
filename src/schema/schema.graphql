@@ -2,6 +2,172 @@
 ### Do not make changes to this file directly
 
 
+type BusinessAccount {
+  id: Int!
+  VenueAdministration(after: VenueAdministrationWhereUniqueInput, before: VenueAdministrationWhereUniqueInput, first: Int, last: Int): [VenueAdministration!]!
+}
+
+input BusinessAccountCreateManyWithoutVenueAdministrationInput {
+  connect: [BusinessAccountWhereUniqueInput!]
+  connectOrCreate: [BusinessAccountCreateOrConnectWithoutVenueAdministrationInput!]
+  create: [BusinessAccountCreateWithoutVenueAdministrationInput!]
+}
+
+input BusinessAccountCreateOneWithoutUserInput {
+  connect: BusinessAccountWhereUniqueInput
+  connectOrCreate: BusinessAccountCreateOrConnectWithoutUserInput
+  create: BusinessAccountCreateWithoutUserInput
+}
+
+input BusinessAccountCreateOneWithoutVenueInput {
+  connect: BusinessAccountWhereUniqueInput
+  connectOrCreate: BusinessAccountCreateOrConnectWithoutVenueInput
+  create: BusinessAccountCreateWithoutVenueInput
+}
+
+input BusinessAccountCreateOrConnectWithoutUserInput {
+  create: BusinessAccountCreateWithoutUserInput!
+  where: BusinessAccountWhereUniqueInput!
+}
+
+input BusinessAccountCreateOrConnectWithoutVenueAdministrationInput {
+  create: BusinessAccountCreateWithoutVenueAdministrationInput!
+  where: BusinessAccountWhereUniqueInput!
+}
+
+input BusinessAccountCreateOrConnectWithoutVenueInput {
+  create: BusinessAccountCreateWithoutVenueInput!
+  where: BusinessAccountWhereUniqueInput!
+}
+
+input BusinessAccountCreateWithoutUserInput {
+  createdAt: DateTime
+  Venue: VenueCreateManyWithoutBusinessAccountInput
+  VenueAdministration: VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput
+}
+
+input BusinessAccountCreateWithoutVenueAdministrationInput {
+  createdAt: DateTime
+  User: UserCreateOneWithoutBusinessAccountInput
+  Venue: VenueCreateManyWithoutBusinessAccountInput
+}
+
+input BusinessAccountCreateWithoutVenueInput {
+  createdAt: DateTime
+  User: UserCreateOneWithoutBusinessAccountInput
+  VenueAdministration: VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput
+}
+
+input BusinessAccountListRelationFilter {
+  every: BusinessAccountWhereInput
+  none: BusinessAccountWhereInput
+  some: BusinessAccountWhereInput
+}
+
+input BusinessAccountScalarWhereInput {
+  AND: [BusinessAccountScalarWhereInput!]
+  createdAt: DateTimeFilter
+  id: IntFilter
+  NOT: [BusinessAccountScalarWhereInput!]
+  OR: [BusinessAccountScalarWhereInput!]
+}
+
+input BusinessAccountUpdateManyMutationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+}
+
+input BusinessAccountUpdateManyWithoutVenueAdministrationInput {
+  connect: [BusinessAccountWhereUniqueInput!]
+  connectOrCreate: [BusinessAccountCreateOrConnectWithoutVenueAdministrationInput!]
+  create: [BusinessAccountCreateWithoutVenueAdministrationInput!]
+  delete: [BusinessAccountWhereUniqueInput!]
+  deleteMany: [BusinessAccountScalarWhereInput!]
+  disconnect: [BusinessAccountWhereUniqueInput!]
+  set: [BusinessAccountWhereUniqueInput!]
+  update: [BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput!]
+  updateMany: [BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput!]
+  upsert: [BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput!]
+}
+
+input BusinessAccountUpdateManyWithWhereWithoutVenueAdministrationInput {
+  data: BusinessAccountUpdateManyMutationInput!
+  where: BusinessAccountScalarWhereInput!
+}
+
+input BusinessAccountUpdateOneWithoutUserInput {
+  connect: BusinessAccountWhereUniqueInput
+  connectOrCreate: BusinessAccountCreateOrConnectWithoutUserInput
+  create: BusinessAccountCreateWithoutUserInput
+  delete: Boolean
+  disconnect: Boolean
+  update: BusinessAccountUpdateWithoutUserInput
+  upsert: BusinessAccountUpsertWithoutUserInput
+}
+
+input BusinessAccountUpdateOneWithoutVenueInput {
+  connect: BusinessAccountWhereUniqueInput
+  connectOrCreate: BusinessAccountCreateOrConnectWithoutVenueInput
+  create: BusinessAccountCreateWithoutVenueInput
+  delete: Boolean
+  disconnect: Boolean
+  update: BusinessAccountUpdateWithoutVenueInput
+  upsert: BusinessAccountUpsertWithoutVenueInput
+}
+
+input BusinessAccountUpdateWithoutUserInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  Venue: VenueUpdateManyWithoutBusinessAccountInput
+  VenueAdministration: VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput
+}
+
+input BusinessAccountUpdateWithoutVenueAdministrationInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  User: UserUpdateOneWithoutBusinessAccountInput
+  Venue: VenueUpdateManyWithoutBusinessAccountInput
+}
+
+input BusinessAccountUpdateWithoutVenueInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  User: UserUpdateOneWithoutBusinessAccountInput
+  VenueAdministration: VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput
+}
+
+input BusinessAccountUpdateWithWhereUniqueWithoutVenueAdministrationInput {
+  data: BusinessAccountUpdateWithoutVenueAdministrationInput!
+  where: BusinessAccountWhereUniqueInput!
+}
+
+input BusinessAccountUpsertWithoutUserInput {
+  create: BusinessAccountCreateWithoutUserInput!
+  update: BusinessAccountUpdateWithoutUserInput!
+}
+
+input BusinessAccountUpsertWithoutVenueInput {
+  create: BusinessAccountCreateWithoutVenueInput!
+  update: BusinessAccountUpdateWithoutVenueInput!
+}
+
+input BusinessAccountUpsertWithWhereUniqueWithoutVenueAdministrationInput {
+  create: BusinessAccountCreateWithoutVenueAdministrationInput!
+  update: BusinessAccountUpdateWithoutVenueAdministrationInput!
+  where: BusinessAccountWhereUniqueInput!
+}
+
+input BusinessAccountWhereInput {
+  AND: [BusinessAccountWhereInput!]
+  createdAt: DateTimeFilter
+  id: IntFilter
+  NOT: [BusinessAccountWhereInput!]
+  OR: [BusinessAccountWhereInput!]
+  User: UserWhereInput
+  Venue: VenueListRelationFilter
+  VenueAdministration: VenueAdministrationListRelationFilter
+}
+
+input BusinessAccountWhereUniqueInput {
+  id: Int
+}
+
 scalar DateTime
 
 input DateTimeFieldUpdateOperationsInput {
@@ -34,7 +200,13 @@ input EmojimoodCreateInput {
 
 input EmojimoodCreateOneWithoutProfileInput {
   connect: EmojimoodWhereUniqueInput
+  connectOrCreate: EmojimoodCreateOrConnectWithoutProfileInput
   create: EmojimoodCreateWithoutProfileInput
+}
+
+input EmojimoodCreateOrConnectWithoutProfileInput {
+  create: EmojimoodCreateWithoutProfileInput!
+  where: EmojimoodWhereUniqueInput!
 }
 
 input EmojimoodCreateWithoutProfileInput {
@@ -42,23 +214,30 @@ input EmojimoodCreateWithoutProfileInput {
   colorTwo: String!
 }
 
+input EmojimoodUpdateInput {
+  colorOne: StringFieldUpdateOperationsInput
+  colorTwo: StringFieldUpdateOperationsInput
+  Profile: ProfileUpdateManyWithoutEmojimoodInput
+}
+
 input EmojimoodUpdateOneWithoutProfileInput {
   connect: EmojimoodWhereUniqueInput
+  connectOrCreate: EmojimoodCreateOrConnectWithoutProfileInput
   create: EmojimoodCreateWithoutProfileInput
   delete: Boolean
   disconnect: Boolean
-  update: EmojimoodUpdateWithoutProfileDataInput
+  update: EmojimoodUpdateWithoutProfileInput
   upsert: EmojimoodUpsertWithoutProfileInput
 }
 
-input EmojimoodUpdateWithoutProfileDataInput {
+input EmojimoodUpdateWithoutProfileInput {
   colorOne: StringFieldUpdateOperationsInput
   colorTwo: StringFieldUpdateOperationsInput
 }
 
 input EmojimoodUpsertWithoutProfileInput {
   create: EmojimoodCreateWithoutProfileInput!
-  update: EmojimoodUpdateWithoutProfileDataInput!
+  update: EmojimoodUpdateWithoutProfileInput!
 }
 
 input EmojimoodWhereInput {
@@ -73,14 +252,6 @@ input EmojimoodWhereInput {
 
 input EmojimoodWhereUniqueInput {
   id: Int
-}
-
-input IntFieldUpdateOperationsInput {
-  decrement: Int
-  divide: Int
-  increment: Int
-  multiply: Int
-  set: Int
 }
 
 input IntFilter {
@@ -107,9 +278,12 @@ input IntNullableFilter {
 
 type Mutation {
   createEmojimood(data: EmojimoodCreateInput!): Emojimood!
+  createOneVenue(data: VenueCreateInput!): Venue!
   createUser(data: UserCreateInput!): User!
-  deleteOneProfile(where: ProfileWhereUniqueInput!): Profile
-  updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
+  updateOneEmojimood(data: EmojimoodUpdateInput!, where: EmojimoodWhereUniqueInput!): Emojimood
+  updateOneProfile(data: ProfileUpdateInput!, where: ProfileWhereUniqueInput!): Profile
+  updateOneUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
+  updateOneVenue(data: VenueUpdateInput!, where: VenueWhereUniqueInput!): Venue
 }
 
 input NestedDateTimeFilter {
@@ -179,31 +353,42 @@ input NullableStringFieldUpdateOperationsInput {
 
 type Profile {
   bio: String
-  emojimood: Emojimood
+  Emojimood: Emojimood
+  emojimoodId: Int
   id: Int!
   User: User
 }
 
 input ProfileCreateManyWithoutEmojimoodInput {
   connect: [ProfileWhereUniqueInput!]
+  connectOrCreate: [ProfileCreateOrConnectWithoutEmojimoodInput!]
   create: [ProfileCreateWithoutEmojimoodInput!]
 }
 
 input ProfileCreateOneWithoutUserInput {
   connect: ProfileWhereUniqueInput
+  connectOrCreate: ProfileCreateOrConnectWithoutUserInput
   create: ProfileCreateWithoutUserInput
+}
+
+input ProfileCreateOrConnectWithoutEmojimoodInput {
+  create: ProfileCreateWithoutEmojimoodInput!
+  where: ProfileWhereUniqueInput!
+}
+
+input ProfileCreateOrConnectWithoutUserInput {
+  create: ProfileCreateWithoutUserInput!
+  where: ProfileWhereUniqueInput!
 }
 
 input ProfileCreateWithoutEmojimoodInput {
   bio: String
-  user: Int!
   User: UserCreateOneWithoutProfileInput
 }
 
 input ProfileCreateWithoutUserInput {
   bio: String
-  emojimood: EmojimoodCreateOneWithoutProfileInput
-  user: Int!
+  Emojimood: EmojimoodCreateOneWithoutProfileInput
 }
 
 input ProfileListRelationFilter {
@@ -212,42 +397,94 @@ input ProfileListRelationFilter {
   some: ProfileWhereInput
 }
 
+input ProfileScalarWhereInput {
+  AND: [ProfileScalarWhereInput!]
+  bio: StringNullableFilter
+  emojimoodId: IntNullableFilter
+  id: IntFilter
+  NOT: [ProfileScalarWhereInput!]
+  OR: [ProfileScalarWhereInput!]
+  userId: IntNullableFilter
+}
+
+input ProfileUpdateInput {
+  bio: NullableStringFieldUpdateOperationsInput
+  Emojimood: EmojimoodUpdateOneWithoutProfileInput
+  User: UserUpdateOneWithoutProfileInput
+}
+
+input ProfileUpdateManyMutationInput {
+  bio: NullableStringFieldUpdateOperationsInput
+}
+
+input ProfileUpdateManyWithoutEmojimoodInput {
+  connect: [ProfileWhereUniqueInput!]
+  connectOrCreate: [ProfileCreateOrConnectWithoutEmojimoodInput!]
+  create: [ProfileCreateWithoutEmojimoodInput!]
+  delete: [ProfileWhereUniqueInput!]
+  deleteMany: [ProfileScalarWhereInput!]
+  disconnect: [ProfileWhereUniqueInput!]
+  set: [ProfileWhereUniqueInput!]
+  update: [ProfileUpdateWithWhereUniqueWithoutEmojimoodInput!]
+  updateMany: [ProfileUpdateManyWithWhereWithoutEmojimoodInput!]
+  upsert: [ProfileUpsertWithWhereUniqueWithoutEmojimoodInput!]
+}
+
+input ProfileUpdateManyWithWhereWithoutEmojimoodInput {
+  data: ProfileUpdateManyMutationInput!
+  where: ProfileScalarWhereInput!
+}
+
 input ProfileUpdateOneWithoutUserInput {
   connect: ProfileWhereUniqueInput
+  connectOrCreate: ProfileCreateOrConnectWithoutUserInput
   create: ProfileCreateWithoutUserInput
   delete: Boolean
   disconnect: Boolean
-  update: ProfileUpdateWithoutUserDataInput
+  update: ProfileUpdateWithoutUserInput
   upsert: ProfileUpsertWithoutUserInput
 }
 
-input ProfileUpdateWithoutUserDataInput {
+input ProfileUpdateWithoutEmojimoodInput {
   bio: NullableStringFieldUpdateOperationsInput
-  emojimood: EmojimoodUpdateOneWithoutProfileInput
-  user: IntFieldUpdateOperationsInput
+  User: UserUpdateOneWithoutProfileInput
+}
+
+input ProfileUpdateWithoutUserInput {
+  bio: NullableStringFieldUpdateOperationsInput
+  Emojimood: EmojimoodUpdateOneWithoutProfileInput
+}
+
+input ProfileUpdateWithWhereUniqueWithoutEmojimoodInput {
+  data: ProfileUpdateWithoutEmojimoodInput!
+  where: ProfileWhereUniqueInput!
 }
 
 input ProfileUpsertWithoutUserInput {
   create: ProfileCreateWithoutUserInput!
-  update: ProfileUpdateWithoutUserDataInput!
+  update: ProfileUpdateWithoutUserInput!
+}
+
+input ProfileUpsertWithWhereUniqueWithoutEmojimoodInput {
+  create: ProfileCreateWithoutEmojimoodInput!
+  update: ProfileUpdateWithoutEmojimoodInput!
+  where: ProfileWhereUniqueInput!
 }
 
 input ProfileWhereInput {
   AND: [ProfileWhereInput!]
   bio: StringNullableFilter
-  emojimood: EmojimoodWhereInput
+  Emojimood: EmojimoodWhereInput
   emojimoodId: IntNullableFilter
   id: IntFilter
   NOT: [ProfileWhereInput!]
   OR: [ProfileWhereInput!]
-  user: IntFilter
   User: UserWhereInput
   userId: IntNullableFilter
 }
 
 input ProfileWhereUniqueInput {
   id: Int
-  user: Int
   userId: Int
 }
 
@@ -258,6 +495,7 @@ type Query {
   findUser(id: Int, name: String): User
   SearchUsers(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int): [User!]!
   users(after: UserWhereUniqueInput, before: UserWhereUniqueInput, first: Int, last: Int, where: UserWhereInput): [User!]!
+  venues(after: VenueWhereUniqueInput, before: VenueWhereUniqueInput, first: Int, last: Int): [Venue!]!
 }
 
 enum QueryMode {
@@ -300,151 +538,114 @@ input StringNullableFilter {
 }
 
 type User {
+  BusinessAccount: Profile
+  createdAt: DateTime!
   email: String!
   id: Int!
   name: String
   profile: Profile
-  VenueAdministration(after: VenueAdministrationWhereUniqueInput, before: VenueAdministrationWhereUniqueInput, first: Int, last: Int): [Profile!]!
-  venues(after: VenueWhereUniqueInput, before: VenueWhereUniqueInput, first: Int, last: Int): [Venue!]!
 }
 
 input UserCreateInput {
+  BusinessAccount: BusinessAccountCreateOneWithoutUserInput
   createdAt: DateTime
   email: String!
   name: String
   profile: ProfileCreateOneWithoutUserInput
-  VenueAdministration: VenueAdministrationCreateManyWithoutAdminsInput
-  venues: VenueCreateManyWithoutUserInput
 }
 
-input UserCreateManyWithoutVenueAdministrationInput {
-  connect: [UserWhereUniqueInput!]
-  create: [UserCreateWithoutVenueAdministrationInput!]
+input UserCreateOneWithoutBusinessAccountInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutBusinessAccountInput
+  create: UserCreateWithoutBusinessAccountInput
 }
 
 input UserCreateOneWithoutProfileInput {
   connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutprofileInput
   create: UserCreateWithoutProfileInput
 }
 
-input UserCreateOneWithoutVenuesInput {
-  connect: UserWhereUniqueInput
-  create: UserCreateWithoutVenuesInput
+input UserCreateOrConnectWithoutBusinessAccountInput {
+  create: UserCreateWithoutBusinessAccountInput!
+  where: UserWhereUniqueInput!
+}
+
+input UserCreateOrConnectWithoutprofileInput {
+  create: UserCreateWithoutProfileInput!
+  where: UserWhereUniqueInput!
+}
+
+input UserCreateWithoutBusinessAccountInput {
+  createdAt: DateTime
+  email: String!
+  name: String
+  profile: ProfileCreateOneWithoutUserInput
 }
 
 input UserCreateWithoutProfileInput {
+  BusinessAccount: BusinessAccountCreateOneWithoutUserInput
   createdAt: DateTime
   email: String!
   name: String
-  VenueAdministration: VenueAdministrationCreateManyWithoutAdminsInput
-  venues: VenueCreateManyWithoutUserInput
-}
-
-input UserCreateWithoutVenueAdministrationInput {
-  createdAt: DateTime
-  email: String!
-  name: String
-  profile: ProfileCreateOneWithoutUserInput
-  venues: VenueCreateManyWithoutUserInput
-}
-
-input UserCreateWithoutVenuesInput {
-  createdAt: DateTime
-  email: String!
-  name: String
-  profile: ProfileCreateOneWithoutUserInput
-  VenueAdministration: VenueAdministrationCreateManyWithoutAdminsInput
-}
-
-input UserListRelationFilter {
-  every: UserWhereInput
-  none: UserWhereInput
-  some: UserWhereInput
-}
-
-input UserScalarWhereInput {
-  AND: [UserScalarWhereInput!]
-  createdAt: DateTimeFilter
-  email: StringFilter
-  id: IntFilter
-  name: StringNullableFilter
-  NOT: [UserScalarWhereInput!]
-  OR: [UserScalarWhereInput!]
 }
 
 input UserUpdateInput {
+  BusinessAccount: BusinessAccountUpdateOneWithoutUserInput
   createdAt: DateTimeFieldUpdateOperationsInput
   email: StringFieldUpdateOperationsInput
   name: NullableStringFieldUpdateOperationsInput
   profile: ProfileUpdateOneWithoutUserInput
-  VenueAdministration: VenueAdministrationUpdateManyWithoutAdminsInput
-  venues: VenueUpdateManyWithoutUserInput
 }
 
-input UserUpdateManyDataInput {
-  createdAt: DateTimeFieldUpdateOperationsInput
-  email: StringFieldUpdateOperationsInput
-  name: NullableStringFieldUpdateOperationsInput
-}
-
-input UserUpdateManyWithoutVenueAdministrationInput {
-  connect: [UserWhereUniqueInput!]
-  create: [UserCreateWithoutVenueAdministrationInput!]
-  delete: [UserWhereUniqueInput!]
-  deleteMany: [UserScalarWhereInput!]
-  disconnect: [UserWhereUniqueInput!]
-  set: [UserWhereUniqueInput!]
-  update: [UserUpdateWithWhereUniqueWithoutVenueAdministrationInput!]
-  updateMany: [UserUpdateManyWithWhereNestedInput!]
-  upsert: [UserUpsertWithWhereUniqueWithoutVenueAdministrationInput!]
-}
-
-input UserUpdateManyWithWhereNestedInput {
-  data: UserUpdateManyDataInput!
-  where: UserScalarWhereInput!
-}
-
-input UserUpdateOneRequiredWithoutVenuesInput {
+input UserUpdateOneWithoutBusinessAccountInput {
   connect: UserWhereUniqueInput
-  create: UserCreateWithoutVenuesInput
-  update: UserUpdateWithoutVenuesDataInput
-  upsert: UserUpsertWithoutVenuesInput
+  connectOrCreate: UserCreateOrConnectWithoutBusinessAccountInput
+  create: UserCreateWithoutBusinessAccountInput
+  delete: Boolean
+  disconnect: Boolean
+  update: UserUpdateWithoutBusinessAccountInput
+  upsert: UserUpsertWithoutBusinessAccountInput
 }
 
-input UserUpdateWithoutVenueAdministrationDataInput {
+input UserUpdateOneWithoutProfileInput {
+  connect: UserWhereUniqueInput
+  connectOrCreate: UserCreateOrConnectWithoutprofileInput
+  create: UserCreateWithoutProfileInput
+  delete: Boolean
+  disconnect: Boolean
+  update: UserUpdateWithoutProfileInput
+  upsert: UserUpsertWithoutProfileInput
+}
+
+input UserUpdateWithoutBusinessAccountInput {
   createdAt: DateTimeFieldUpdateOperationsInput
   email: StringFieldUpdateOperationsInput
   name: NullableStringFieldUpdateOperationsInput
   profile: ProfileUpdateOneWithoutUserInput
-  venues: VenueUpdateManyWithoutUserInput
 }
 
-input UserUpdateWithoutVenuesDataInput {
+input UserUpdateWithoutProfileInput {
+  BusinessAccount: BusinessAccountUpdateOneWithoutUserInput
   createdAt: DateTimeFieldUpdateOperationsInput
   email: StringFieldUpdateOperationsInput
   name: NullableStringFieldUpdateOperationsInput
-  profile: ProfileUpdateOneWithoutUserInput
-  VenueAdministration: VenueAdministrationUpdateManyWithoutAdminsInput
 }
 
-input UserUpdateWithWhereUniqueWithoutVenueAdministrationInput {
-  data: UserUpdateWithoutVenueAdministrationDataInput!
-  where: UserWhereUniqueInput!
+input UserUpsertWithoutBusinessAccountInput {
+  create: UserCreateWithoutBusinessAccountInput!
+  update: UserUpdateWithoutBusinessAccountInput!
 }
 
-input UserUpsertWithoutVenuesInput {
-  create: UserCreateWithoutVenuesInput!
-  update: UserUpdateWithoutVenuesDataInput!
-}
-
-input UserUpsertWithWhereUniqueWithoutVenueAdministrationInput {
-  create: UserCreateWithoutVenueAdministrationInput!
-  update: UserUpdateWithoutVenueAdministrationDataInput!
-  where: UserWhereUniqueInput!
+input UserUpsertWithoutProfileInput {
+  create: UserCreateWithoutProfileInput!
+  update: UserUpdateWithoutProfileInput!
 }
 
 input UserWhereInput {
   AND: [UserWhereInput!]
+  BusinessAccount: BusinessAccountWhereInput
+  businessAccountId: IntNullableFilter
   createdAt: DateTimeFilter
   email: StringFilter
   id: IntFilter
@@ -452,36 +653,59 @@ input UserWhereInput {
   NOT: [UserWhereInput!]
   OR: [UserWhereInput!]
   profile: ProfileWhereInput
-  VenueAdministration: VenueAdministrationListRelationFilter
-  venues: VenueListRelationFilter
 }
 
 input UserWhereUniqueInput {
+  businessAccountId: Int
   email: String
   id: Int
 }
 
 type Venue {
+  businessAccount: BusinessAccount
   id: Int!
+  VenueAdministration: VenueAdministration!
   VenueDetails: VenueDetails!
+  venueDetailsId: Int!
 }
 
-input VenueAdministrationCreateManyWithoutAdminsInput {
+type VenueAdministration {
+  AdminsBusinessAccount(after: BusinessAccountWhereUniqueInput, before: BusinessAccountWhereUniqueInput, first: Int, last: Int): [BusinessAccount!]!
+  id: Int!
+  knalb: String
+  Venue: Venue
+}
+
+input VenueAdministrationCreateManyWithoutAdminsBusinessAccountInput {
   connect: [VenueAdministrationWhereUniqueInput!]
-  create: [VenueAdministrationCreateWithoutAdminsInput!]
+  connectOrCreate: [VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput!]
+  create: [VenueAdministrationCreateWithoutAdminsBusinessAccountInput!]
 }
 
 input VenueAdministrationCreateOneWithoutVenueInput {
   connect: VenueAdministrationWhereUniqueInput
+  connectOrCreate: VenueAdministrationCreateOrConnectWithoutVenueInput
   create: VenueAdministrationCreateWithoutVenueInput
 }
 
-input VenueAdministrationCreateWithoutAdminsInput {
-  venue: VenueCreateOneWithoutVenueAdministrationInput
+input VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput {
+  create: VenueAdministrationCreateWithoutAdminsBusinessAccountInput!
+  where: VenueAdministrationWhereUniqueInput!
+}
+
+input VenueAdministrationCreateOrConnectWithoutVenueInput {
+  create: VenueAdministrationCreateWithoutVenueInput!
+  where: VenueAdministrationWhereUniqueInput!
+}
+
+input VenueAdministrationCreateWithoutAdminsBusinessAccountInput {
+  knalb: String
+  Venue: VenueCreateOneWithoutVenueAdministrationInput
 }
 
 input VenueAdministrationCreateWithoutVenueInput {
-  admins: UserCreateManyWithoutVenueAdministrationInput
+  AdminsBusinessAccount: BusinessAccountCreateManyWithoutVenueAdministrationInput
+  knalb: String
 }
 
 input VenueAdministrationListRelationFilter {
@@ -493,131 +717,166 @@ input VenueAdministrationListRelationFilter {
 input VenueAdministrationScalarWhereInput {
   AND: [VenueAdministrationScalarWhereInput!]
   id: IntFilter
+  knalb: StringNullableFilter
   NOT: [VenueAdministrationScalarWhereInput!]
   OR: [VenueAdministrationScalarWhereInput!]
 }
 
-input VenueAdministrationUpdateManyDataInput
+input VenueAdministrationUpdateManyMutationInput {
+  knalb: NullableStringFieldUpdateOperationsInput
+}
 
-input VenueAdministrationUpdateManyWithoutAdminsInput {
+input VenueAdministrationUpdateManyWithoutAdminsBusinessAccountInput {
   connect: [VenueAdministrationWhereUniqueInput!]
-  create: [VenueAdministrationCreateWithoutAdminsInput!]
+  connectOrCreate: [VenueAdministrationCreateOrConnectWithoutAdminsBusinessAccountInput!]
+  create: [VenueAdministrationCreateWithoutAdminsBusinessAccountInput!]
   delete: [VenueAdministrationWhereUniqueInput!]
   deleteMany: [VenueAdministrationScalarWhereInput!]
   disconnect: [VenueAdministrationWhereUniqueInput!]
   set: [VenueAdministrationWhereUniqueInput!]
-  update: [VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput!]
-  updateMany: [VenueAdministrationUpdateManyWithWhereNestedInput!]
-  upsert: [VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput!]
+  update: [VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput!]
+  updateMany: [VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput!]
+  upsert: [VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput!]
 }
 
-input VenueAdministrationUpdateManyWithWhereNestedInput {
-  data: VenueAdministrationUpdateManyDataInput!
+input VenueAdministrationUpdateManyWithWhereWithoutAdminsBusinessAccountInput {
+  data: VenueAdministrationUpdateManyMutationInput!
   where: VenueAdministrationScalarWhereInput!
 }
 
 input VenueAdministrationUpdateOneRequiredWithoutVenueInput {
   connect: VenueAdministrationWhereUniqueInput
+  connectOrCreate: VenueAdministrationCreateOrConnectWithoutVenueInput
   create: VenueAdministrationCreateWithoutVenueInput
-  update: VenueAdministrationUpdateWithoutVenueDataInput
+  update: VenueAdministrationUpdateWithoutVenueInput
   upsert: VenueAdministrationUpsertWithoutVenueInput
 }
 
-input VenueAdministrationUpdateWithoutAdminsDataInput {
-  venue: VenueUpdateOneWithoutVenueAdministrationInput
+input VenueAdministrationUpdateWithoutAdminsBusinessAccountInput {
+  knalb: NullableStringFieldUpdateOperationsInput
+  Venue: VenueUpdateOneWithoutVenueAdministrationInput
 }
 
-input VenueAdministrationUpdateWithoutVenueDataInput {
-  admins: UserUpdateManyWithoutVenueAdministrationInput
+input VenueAdministrationUpdateWithoutVenueInput {
+  AdminsBusinessAccount: BusinessAccountUpdateManyWithoutVenueAdministrationInput
+  knalb: NullableStringFieldUpdateOperationsInput
 }
 
-input VenueAdministrationUpdateWithWhereUniqueWithoutAdminsInput {
-  data: VenueAdministrationUpdateWithoutAdminsDataInput!
+input VenueAdministrationUpdateWithWhereUniqueWithoutAdminsBusinessAccountInput {
+  data: VenueAdministrationUpdateWithoutAdminsBusinessAccountInput!
   where: VenueAdministrationWhereUniqueInput!
 }
 
 input VenueAdministrationUpsertWithoutVenueInput {
   create: VenueAdministrationCreateWithoutVenueInput!
-  update: VenueAdministrationUpdateWithoutVenueDataInput!
+  update: VenueAdministrationUpdateWithoutVenueInput!
 }
 
-input VenueAdministrationUpsertWithWhereUniqueWithoutAdminsInput {
-  create: VenueAdministrationCreateWithoutAdminsInput!
-  update: VenueAdministrationUpdateWithoutAdminsDataInput!
+input VenueAdministrationUpsertWithWhereUniqueWithoutAdminsBusinessAccountInput {
+  create: VenueAdministrationCreateWithoutAdminsBusinessAccountInput!
+  update: VenueAdministrationUpdateWithoutAdminsBusinessAccountInput!
   where: VenueAdministrationWhereUniqueInput!
 }
 
 input VenueAdministrationWhereInput {
-  admins: UserListRelationFilter
+  AdminsBusinessAccount: BusinessAccountListRelationFilter
   AND: [VenueAdministrationWhereInput!]
   id: IntFilter
+  knalb: StringNullableFilter
   NOT: [VenueAdministrationWhereInput!]
   OR: [VenueAdministrationWhereInput!]
-  venue: VenueWhereInput
+  Venue: VenueWhereInput
 }
 
 input VenueAdministrationWhereUniqueInput {
   id: Int
 }
 
-input VenueCreateManyWithoutUserInput {
+input VenueCreateInput {
+  businessAccount: BusinessAccountCreateOneWithoutVenueInput
+  createdAt: DateTime
+  VenueAdministration: VenueAdministrationCreateOneWithoutVenueInput!
+  VenueDetails: VenueDetailsCreateOneWithoutVenueInput!
+}
+
+input VenueCreateManyWithoutBusinessAccountInput {
   connect: [VenueWhereUniqueInput!]
-  create: [VenueCreateWithoutUserInput!]
+  connectOrCreate: [VenueCreateOrConnectWithoutbusinessAccountInput!]
+  create: [VenueCreateWithoutBusinessAccountInput!]
 }
 
 input VenueCreateOneWithoutVenueAdministrationInput {
   connect: VenueWhereUniqueInput
+  connectOrCreate: VenueCreateOrConnectWithoutVenueAdministrationInput
   create: VenueCreateWithoutVenueAdministrationInput
 }
 
-input VenueCreateWithoutUserInput {
+input VenueCreateOrConnectWithoutbusinessAccountInput {
+  create: VenueCreateWithoutBusinessAccountInput!
+  where: VenueWhereUniqueInput!
+}
+
+input VenueCreateOrConnectWithoutVenueAdministrationInput {
+  create: VenueCreateWithoutVenueAdministrationInput!
+  where: VenueWhereUniqueInput!
+}
+
+input VenueCreateWithoutBusinessAccountInput {
   createdAt: DateTime
   VenueAdministration: VenueAdministrationCreateOneWithoutVenueInput!
   VenueDetails: VenueDetailsCreateOneWithoutVenueInput!
 }
 
 input VenueCreateWithoutVenueAdministrationInput {
+  businessAccount: BusinessAccountCreateOneWithoutVenueInput
   createdAt: DateTime
-  User: UserCreateOneWithoutVenuesInput!
   VenueDetails: VenueDetailsCreateOneWithoutVenueInput!
 }
 
 type VenueDetails {
-  description: String!
+  description: String
   id: Int!
   name: String!
+  Venue: Venue
 }
 
 input VenueDetailsCreateOneWithoutVenueInput {
   connect: VenueDetailsWhereUniqueInput
+  connectOrCreate: VenueDetailsCreateOrConnectWithoutVenueInput
   create: VenueDetailsCreateWithoutVenueInput
 }
 
+input VenueDetailsCreateOrConnectWithoutVenueInput {
+  create: VenueDetailsCreateWithoutVenueInput!
+  where: VenueDetailsWhereUniqueInput!
+}
+
 input VenueDetailsCreateWithoutVenueInput {
-  description: String!
+  description: String
   name: String!
 }
 
 input VenueDetailsUpdateOneRequiredWithoutVenueInput {
   connect: VenueDetailsWhereUniqueInput
+  connectOrCreate: VenueDetailsCreateOrConnectWithoutVenueInput
   create: VenueDetailsCreateWithoutVenueInput
-  update: VenueDetailsUpdateWithoutVenueDataInput
+  update: VenueDetailsUpdateWithoutVenueInput
   upsert: VenueDetailsUpsertWithoutVenueInput
 }
 
-input VenueDetailsUpdateWithoutVenueDataInput {
-  description: StringFieldUpdateOperationsInput
+input VenueDetailsUpdateWithoutVenueInput {
+  description: NullableStringFieldUpdateOperationsInput
   name: StringFieldUpdateOperationsInput
 }
 
 input VenueDetailsUpsertWithoutVenueInput {
   create: VenueDetailsCreateWithoutVenueInput!
-  update: VenueDetailsUpdateWithoutVenueDataInput!
+  update: VenueDetailsUpdateWithoutVenueInput!
 }
 
 input VenueDetailsWhereInput {
   AND: [VenueDetailsWhereInput!]
-  description: StringFilter
+  description: StringNullableFilter
   id: IntFilter
   name: StringFilter
   NOT: [VenueDetailsWhereInput!]
@@ -637,81 +896,90 @@ input VenueListRelationFilter {
 
 input VenueScalarWhereInput {
   AND: [VenueScalarWhereInput!]
+  businessAccountId: IntNullableFilter
   createdAt: DateTimeFilter
   id: IntFilter
   NOT: [VenueScalarWhereInput!]
   OR: [VenueScalarWhereInput!]
-  userId: IntFilter
   venueAdministrationId: IntFilter
   venueDetailsId: IntFilter
 }
 
-input VenueUpdateManyDataInput {
-  createdAt: DateTimeFieldUpdateOperationsInput
-}
-
-input VenueUpdateManyWithoutUserInput {
-  connect: [VenueWhereUniqueInput!]
-  create: [VenueCreateWithoutUserInput!]
-  delete: [VenueWhereUniqueInput!]
-  deleteMany: [VenueScalarWhereInput!]
-  disconnect: [VenueWhereUniqueInput!]
-  set: [VenueWhereUniqueInput!]
-  update: [VenueUpdateWithWhereUniqueWithoutUserInput!]
-  updateMany: [VenueUpdateManyWithWhereNestedInput!]
-  upsert: [VenueUpsertWithWhereUniqueWithoutUserInput!]
-}
-
-input VenueUpdateManyWithWhereNestedInput {
-  data: VenueUpdateManyDataInput!
-  where: VenueScalarWhereInput!
-}
-
-input VenueUpdateOneWithoutVenueAdministrationInput {
-  connect: VenueWhereUniqueInput
-  create: VenueCreateWithoutVenueAdministrationInput
-  delete: Boolean
-  disconnect: Boolean
-  update: VenueUpdateWithoutVenueAdministrationDataInput
-  upsert: VenueUpsertWithoutVenueAdministrationInput
-}
-
-input VenueUpdateWithoutUserDataInput {
+input VenueUpdateInput {
+  businessAccount: BusinessAccountUpdateOneWithoutVenueInput
   createdAt: DateTimeFieldUpdateOperationsInput
   VenueAdministration: VenueAdministrationUpdateOneRequiredWithoutVenueInput
   VenueDetails: VenueDetailsUpdateOneRequiredWithoutVenueInput
 }
 
-input VenueUpdateWithoutVenueAdministrationDataInput {
+input VenueUpdateManyMutationInput {
   createdAt: DateTimeFieldUpdateOperationsInput
-  User: UserUpdateOneRequiredWithoutVenuesInput
+}
+
+input VenueUpdateManyWithoutBusinessAccountInput {
+  connect: [VenueWhereUniqueInput!]
+  connectOrCreate: [VenueCreateOrConnectWithoutbusinessAccountInput!]
+  create: [VenueCreateWithoutBusinessAccountInput!]
+  delete: [VenueWhereUniqueInput!]
+  deleteMany: [VenueScalarWhereInput!]
+  disconnect: [VenueWhereUniqueInput!]
+  set: [VenueWhereUniqueInput!]
+  update: [VenueUpdateWithWhereUniqueWithoutBusinessAccountInput!]
+  updateMany: [VenueUpdateManyWithWhereWithoutBusinessAccountInput!]
+  upsert: [VenueUpsertWithWhereUniqueWithoutBusinessAccountInput!]
+}
+
+input VenueUpdateManyWithWhereWithoutBusinessAccountInput {
+  data: VenueUpdateManyMutationInput!
+  where: VenueScalarWhereInput!
+}
+
+input VenueUpdateOneWithoutVenueAdministrationInput {
+  connect: VenueWhereUniqueInput
+  connectOrCreate: VenueCreateOrConnectWithoutVenueAdministrationInput
+  create: VenueCreateWithoutVenueAdministrationInput
+  delete: Boolean
+  disconnect: Boolean
+  update: VenueUpdateWithoutVenueAdministrationInput
+  upsert: VenueUpsertWithoutVenueAdministrationInput
+}
+
+input VenueUpdateWithoutBusinessAccountInput {
+  createdAt: DateTimeFieldUpdateOperationsInput
+  VenueAdministration: VenueAdministrationUpdateOneRequiredWithoutVenueInput
   VenueDetails: VenueDetailsUpdateOneRequiredWithoutVenueInput
 }
 
-input VenueUpdateWithWhereUniqueWithoutUserInput {
-  data: VenueUpdateWithoutUserDataInput!
+input VenueUpdateWithoutVenueAdministrationInput {
+  businessAccount: BusinessAccountUpdateOneWithoutVenueInput
+  createdAt: DateTimeFieldUpdateOperationsInput
+  VenueDetails: VenueDetailsUpdateOneRequiredWithoutVenueInput
+}
+
+input VenueUpdateWithWhereUniqueWithoutBusinessAccountInput {
+  data: VenueUpdateWithoutBusinessAccountInput!
   where: VenueWhereUniqueInput!
 }
 
 input VenueUpsertWithoutVenueAdministrationInput {
   create: VenueCreateWithoutVenueAdministrationInput!
-  update: VenueUpdateWithoutVenueAdministrationDataInput!
+  update: VenueUpdateWithoutVenueAdministrationInput!
 }
 
-input VenueUpsertWithWhereUniqueWithoutUserInput {
-  create: VenueCreateWithoutUserInput!
-  update: VenueUpdateWithoutUserDataInput!
+input VenueUpsertWithWhereUniqueWithoutBusinessAccountInput {
+  create: VenueCreateWithoutBusinessAccountInput!
+  update: VenueUpdateWithoutBusinessAccountInput!
   where: VenueWhereUniqueInput!
 }
 
 input VenueWhereInput {
   AND: [VenueWhereInput!]
+  businessAccount: BusinessAccountWhereInput
+  businessAccountId: IntNullableFilter
   createdAt: DateTimeFilter
   id: IntFilter
   NOT: [VenueWhereInput!]
   OR: [VenueWhereInput!]
-  User: UserWhereInput
-  userId: IntFilter
   VenueAdministration: VenueAdministrationWhereInput
   venueAdministrationId: IntFilter
   VenueDetails: VenueDetailsWhereInput
